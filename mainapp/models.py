@@ -3,7 +3,40 @@ from django.db import models
 # Create your models here.
 
 
+class Issue(models.Model):
+    name_uz = models.CharField(
+        max_length=200,
+        verbose_name="Nomi[uz]"
+    )
+
+    name_en = models.CharField(
+        max_length=200,
+        verbose_name="Nomi[en]"
+    )
+
+    file_link = models.URLField(
+        verbose_name="Journal manzili"
+    )
+
+    created_at = models.DateTimeField(
+        verbose_name="Kiritilgan vaqt",
+        auto_now_add=True
+    )
+
+    def article(self, obj):
+        return obj.articles
+
+    def __str__(self):
+        return self.name_uz
+
+
 class Article(models.Model):
+    issue = models.ForeignKey(
+        to=Issue,
+        on_delete=models.CASCADE,
+        verbose_name="Jurnal soni"
+    )
+
     author_uz = models.CharField(
         max_length=200,
         verbose_name="Muallif[uz]"
@@ -53,6 +86,16 @@ class Article(models.Model):
         verbose_name="Kitob manzili"
     )
 
+    first_page = models.IntegerField(
+        verbose_name="Birinchi sahifasi",
+        default=0
+    )
+
+    last_page = models.IntegerField(
+        verbose_name="Ohirgi sahifasi",
+        default=0
+    )
+
     created_at = models.DateTimeField(
         verbose_name="Kiritilgan vaqt",
         auto_now_add=True
@@ -60,29 +103,3 @@ class Article(models.Model):
 
     def __str__(self):
         return self.name_uz
-
-
-class Issue(models.Model):
-    name_uz = models.CharField(
-        max_length=200,
-        verbose_name="Nomi[uz]"
-    )
-
-    name_en = models.CharField(
-        max_length=200,
-        verbose_name="Nomi[en]"
-    )
-
-    articles = models.ManyToManyField(
-        to=Article,
-        related_name="articles"
-    )
-
-    file_link = models.URLField(
-        verbose_name="Journal manzili"
-    )
-
-    created_at = models.DateTimeField(
-        verbose_name="Kiritilgan vaqt",
-        auto_now_add=True
-    )
