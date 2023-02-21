@@ -1,0 +1,17 @@
+.journal-item:not(:first-child) {
+    margin-top: 10px
+}
+
+.journal-item:hover {
+    background-color: #d3dadc;
+}
+
+.journal-item a {
+    color: black;
+    text-decoration: none;
+}
+
+.sub_title {
+    font-size: 14px;
+    font-weight: bold !important
+}

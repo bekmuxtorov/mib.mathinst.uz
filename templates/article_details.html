@@ -1,0 +1,424 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Bulletin of the Institute of Mathematics ISSN 2181-9483
+    </title>
+
+
+    <meta name="generator" content="Open Journal Systems 3.3.0.8">
+    <meta name="gs_meta_revision" content="1.1">
+    <meta name="citation_journal_title" content="Bulletin of the Institute of Mathematics ISSN 2181-9483">
+    <meta name="citation_journal_abbrev" content="APJMMR">
+    <meta name="citation_issn" content="2181-9483">
+    {% for author in authors %}
+    <meta name="citation_author" content="{{ author }}">
+    {% endfor %}
+    <meta name="citation_title" content="{{ article.name_en | upper }}">
+    <meta name="citation_language" content="en">
+    <meta name="citation_date" content="{{article_date}}">
+    <meta name="citation_volume" content="{{article_value}}">
+    <meta name="citation_issue" content="{{article.issue}}">
+    <meta name="citation_firstpage" content="{{article.first_page}}">
+    <meta name="citation_lastpage" content="{{article.last_page}}">
+    <meta name="citation_abstract_html_url" content="http://localhost:8000{% url 'detail' pk=article.pk %}">
+    <meta name="citation_keywords" xml:lang="en" content="{{article.keywords}}.">
+    <meta name="citation_pdf_url" content="{{article.file_link}}">
+    {% for reference in references %}
+    <meta name="citation_reference" content="{{reference}}">
+    {% endfor %}
+
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+    {% for author in authors %}
+    <meta name="DC.Creator.PersonalName" content="{{author}}">
+    {% endfor %}
+    <meta name="DC.Date.created" scheme="ISO8601" content="{{article_date}}">
+    <meta name="DC.Date.dateSubmitted" scheme="ISO8601" content="{{article_date}}">
+    <meta name="DC.Date.issued" scheme="ISO8601" content="{{article_date}}">
+    <meta name="DC.Date.modified" scheme="ISO8601" content="{{article_date}}">
+    <meta name="DC.Description" xml:lang="en" content="{{article.short_data_en}}">
+    <meta name="DC.Format" scheme="IMT" content="application/pdf">
+    <meta name="DC.Identifier" content="{{article.pk}}">
+    <meta name="DC.Identifier.pageNumber" content="{{article.first_page}}-{{article.last_page}}">
+    <meta name="DC.Identifier.URI" content="{% url 'detail' pk=article.pk %}">
+    <meta name="DC.Language" scheme="ISO639-1" content="en">
+    <meta name="DC.Rights" content="Copyright (c) 2023 Erkinjon Karimov">
+    <meta name="DC.Rights" content="">
+    <meta name="DC.Source" content="Bulletin of the Institute of Mathematics ISSN 2181-9483">
+    <meta name="DC.Source.ISSN" content="2181-9483">
+    <meta name="DC.Source.Issue" content="{{article.issue}}">
+    <meta name="DC.Source.Volume" content="{{article_value}}">
+    <meta name="DC.Source.URI" content="http://mib.mathinst.uz/">
+    <meta name="DC.Subject" xml:lang="en" content="{{article.keywords}}.">
+    <meta name="DC.Title" content="{{article.short_data_en}}">
+    <meta name="DC.Type" content="Text.Serial.Journal">
+    <meta name="DC.Type.articleType" content="Articles">
+    <link rel="stylesheet" href="{% static 'style/main.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'style/main2.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'style/fontawesome.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'style/example.css' %}">
+</head>
+
+<body class="pkp_page_article pkp_op_view has_site_logo" dir="ltr">
+
+    <div class="pkp_structure_page">
+
+        <header class="pkp_structure_head" id="headerNavigationContainer" role="banner">
+
+
+            <div class="pkp_head_wrapper">
+
+
+
+                <nav class="pkp_site_nav_menu" aria-label="Site Navigation">
+                    <a id="siteNav"></a>
+                    <div class="pkp_navigation_primary_row">
+                        <div class="pkp_navigation_primary_wrapper">
+                            <ul id="navigationPrimary" class="pkp_navigation_primary pkp_nav_list">
+                                <li class="">
+                                    <a href="{% url 'home' %}" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false" id="pkpDropdown0">
+                                        Asosiy
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="pkpDropdown0">
+                                        <li class="">
+                                            <a href="{% url 'home' %}">
+                                                Bosh sahifa
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="{% url 'about' %}" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false" id="pkpDropdown1">
+                                        Jurnal haqida
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="pkpDropdown1">
+                                        <li class="">
+                                            <a href="{% url 'about' %}">
+                                                Batafsil ma'lumot
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="">
+                                    <a href="{% url 'editorial' %}">
+                                        Tahririyat
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="{% url 'for_author' %}">
+                                        Mualliflar uchun
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="{% url 'last_issue' %}">
+                                        Ohirgi son
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="{% url 'archive' %}">
+                                        Arhiv
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a href="{% url 'contact' %}">
+                                        Bog'lanish
+                                    </a>
+                                </li>
+
+                            </ul>
+
+
+
+                            <div class="pkp_navigation_search_wrapper">
+                                <a href="https://www.gejournal.net/index.php/APJMMR/search"
+                                    class="pkp_search pkp_search_desktop">
+                                    <span class="fa fa-search" aria-hidden="true"></span>
+                                    <!-- Search -->
+                                    Qidirish
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </nav>
+            </div><!-- .pkp_head_wrapper -->
+        </header><!-- .pkp_structure_head -->
+
+        <div class="pkp_structure_content has_sidebar">
+            <div class="pkp_structure_main" role="main">
+                <a id="pkp_content_main"></a>
+
+                <div class="page page_article">
+                    <nav class="cmp_breadcrumbs" role="navigation" aria-label="You are here:">
+                        <ol>
+                            <li>
+                                <a href="{% url 'home' %}">
+                                    <!-- Home -->
+                                    Bosh sahifa
+                                </a>
+                                <span class="separator">/</span>
+                            </li>
+                            <li>
+                                <a href="{% url 'archive' %}">
+                                    <!-- Archives -->
+                                    Arhiv
+                                </a>
+                                <span class="separator">/</span>
+                            </li>
+                            <li>
+                                <a href="{% url 'detail' pk=article.pk %}">
+                                    {{ article.name_uz | upper }}
+                                </a>
+                                <span class="separator">/</span>
+                            </li>
+
+                        </ol>
+                    </nav>
+
+                    <article class="obj_article_details">
+
+
+                        <h1 class="citation_title page_title">
+                            {{ article.name_uz|upper }}
+                        </h1>
+
+
+                        <div class="row">
+                            <div class="main_entry">
+
+                                <section class="item authors">
+                                    <h2 class="">
+                                        <!-- Authors -->
+                                        Mualliflar
+                                        <hr>
+                                    </h2>
+                                    <ul class="authors">
+                                        {% for author in authors %}
+                                        <li>
+                                            <h3 class="citation_author name" style="font-size: 16px; margin: 5px 0;">
+                                                {{ author }}
+                                            </h3>
+                                        </li>
+                                        {% endfor %}
+
+                                    </ul>
+                                </section>
+
+
+                                <section class="item keywords">
+                                    <h2 class="label sub_title">
+                                        <!-- Keywords: -->
+                                        Kalit so'zlar
+                                    </h2>
+                                    <span class="value">
+                                        {{article.keywords_uz}}
+                                    </span>
+                                </section>
+
+                                <section class="item abstract">
+                                    <h4 class="label sub_title">
+                                        <!-- Abstract -->
+                                        Anatatsiya
+                                    </h4>
+                                    <p>
+                                        {{article.short_data_uz}}
+                                    </p>
+                                </section>
+
+
+
+
+                                <section class="item references">
+                                    <h4 class="label sub_title">
+                                        <!-- References -->
+                                        Foydalanilgan adabiyotlar
+                                    </h4>
+                                    <div class="value">
+                                        {% for reference in references %}
+                                        <p>
+                                            {{ reference }}
+                                        </p>
+                                        {% endfor %}
+
+
+                                    </div>
+                                </section>
+
+                            </div><!-- .main_entry -->
+
+                            <div class="entry_details">
+
+                                <div class="item cover_image">
+                                    <div class="sub_item">
+                                        <a href="">
+                                            <img src="{% static 'images/book.jpg' %}" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="item galleys">
+                                    <h4 class="sub_title">
+                                        <!-- Downloads -->
+                                        Yuklab olish
+                                    </h4>
+                                    <ul class="value galleys_links"
+                                        style="display:flex; align-items:center; justify-content: start;">
+                                        <li>
+                                            <a class="obj_galley_link pdf" href="{{ article.file_link }}">
+                                                PDF
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="item published">
+                                    <section class="sub_item">
+                                        <h4 class="label sub_title">
+                                            <!-- Published -->
+                                            Chop etilgan
+                                        </h4>
+                                        <div class="value">
+                                            <span>{{ article.created_at }}</span>
+                                        </div>
+                                    </section>
+                                </div>
+
+
+                                <div class="item issue">
+
+                                    <section class="sub_item">
+                                        <h4 class="label sub_title">
+                                            <!-- Issue -->
+                                            Soni
+                                        </h4>
+                                        <div class="value">
+
+                                            {{article.issue}}
+
+                                        </div>
+                                    </section>
+
+                                    <section class="sub_item">
+                                        <h4 class="label sub_title">
+                                            Bo'lim
+                                        </h4>
+                                        <div class="value">
+                                            <!-- Articles -->
+                                            Maqolalar
+                                        </div>
+                                    </section>
+
+                                </div>
+
+
+                                <!-- <div class="item copyright">
+                                    <h2 class="label">
+                                        License
+                                    </h2>
+                                    <p>Copyright (c) 2023 GEJournals</p>
+                                    <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+                                            alt="Creative Commons License" src="./example_files/88x31.png"></a>
+                                    <p>This work is licensed under a <a rel="license"
+                                            href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons
+                                            Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</p>
+
+                                </div> -->
+
+
+
+                            </div><!-- .entry_details -->
+                        </div><!-- .row -->
+
+                    </article>
+
+
+
+                </div><!-- .page -->
+
+            </div><!-- pkp_structure_main -->
+
+            <div class="pkp_structure_sidebar left" role="complementary" aria-label="Sidebar">
+                <div class="pkp_block block_language">
+                    <h4 class="title">
+                        <!-- Language -->
+                        Tillar
+                    </h4>
+
+                    <div class="content">
+                        <ul>
+                            <li class="locale_hy_AM" lang="hy-AM">
+                                <a
+                                    href="https://www.gejournal.net/index.php/APJMMR/user/setLocale/hy_AM?source=%2Findex.php%2FAPJMMR%2Farticle%2Fview%2F1549">
+                                    Uzbek
+                                </a>
+                            </li>
+                            <li class="locale_it_IT" lang="it-IT">
+                                <a
+                                    href="https://www.gejournal.net/index.php/APJMMR/user/setLocale/it_IT?source=%2Findex.php%2FAPJMMR%2Farticle%2Fview%2F1549">
+                                    Ingliz
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div><!-- .block_language -->
+                <div class="pkp_block block_information">
+                    <h4 class="title sub_title">
+                        <!-- Information -->
+                        Ma'lumotlar
+                    </h4>
+                    <div class="content">
+                        <ul>
+
+                            <li>
+                                <a href="{% url 'for_author' %}">
+                                    Mualliflar uchun
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'contact' %}">
+                                    Bog'lanish
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div><!-- pkp_sidebar.left -->
+        </div><!-- pkp_structure_content -->
+
+        <div class="pkp_structure_footer_wrapper" role="contentinfo">
+            <a id="pkp_content_footer"></a>
+
+            <div class="pkp_structure_footer">
+
+                <div class="pkp_footer_content">
+                    <p><strong>(C) Erkinjon Karimov, 2019</strong></p>
+                </div>
+
+
+            </div>
+        </div><!-- pkp_structure_footer_wrapper -->
+
+    </div><!-- pkp_structure_page -->
+
+    <script src="./example_files/jquery.min.js.download" type="text/javascript"></script>
+    <script src="./example_files/jquery-ui.min.js.download" type="text/javascript"></script>
+    <script src="./example_files/popper.js.download" type="text/javascript"></script>
+    <script src="./example_files/util.js.download" type="text/javascript"></script>
+    <script src="./example_files/dropdown.js.download" type="text/javascript"></script>
+    <script src="./example_files/main.js.download" type="text/javascript"></script>
+
+
+
+
+</body>
+
+</html>
