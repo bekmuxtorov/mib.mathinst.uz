@@ -14,6 +14,7 @@
     <meta property="og:image:height" content="2160">
     <meta name="viewport" content="width=1150" />
 
+    <link rel="stylesheet" href="{% static 'style/example.css'%}" media="screen,print" />
     <link rel="stylesheet" href="{% static 'style/reset.css'%}" media="screen,print" />
     <link rel="stylesheet" href="{% static 'style/print.css'%}" media="print" />
     <link rel="stylesheet" href="{% static 'style/style.css'%}" media="screen,print" />
@@ -102,7 +103,8 @@
                             <div id="imHeader_imCell_6" class="">
                                 <div id="imHeader_imCellStyleGraphics_6"></div>
                                 <div id="imHeader_imCellStyle_6"><a href="http://mib.mathinst.uz/en/index.html"><img
-                                            id="imHeader_imObjectImage_06" src="images/uk2_1.png" title="" alt="" /></a>
+                                            id="imHeader_imObjectImage_06" src="{% static 'images/uk2_1.png' %}"
+                                            title="" alt="" /></a>
                                 </div>
                             </div>
                         </div>
@@ -111,8 +113,8 @@
                                 <div id="imHeader_imCellStyleGraphics_7"></div>
                                 <div id="imHeader_imCellStyle_7"><a href="http://mib.mathinst.uz/index.html"
                                         onclick="return x5engine.imShowBox({ media:[{type: 'iframe', url: 'http://mib.mathinst.uz/index.html', width: 1920, height: 1080, description: ''}]}, 0, this);"><img
-                                            id="imHeader_imObjectImage_07" src="images/uzbekistan.png" title=""
-                                            alt="" /></a></div>
+                                            id="imHeader_imObjectImage_07" src="{% static 'images/uzbekistan.png' %}"
+                                            title="" alt="" /></a></div>
                             </div>
                         </div>
                     </div>
@@ -283,8 +285,6 @@
                                     <div id="imCellStyle_1">
                                         <div id="imTextObject_13_01">
                                             <div class="text-tab-content" id="imTextObject_13_01_tab0" style="">
-                                                {{issues}}
-
                                                 <div class="text-inner">
                                                     <div class="imTAJustify"><b><br></b></div>
                                                     <div class="imTAJustify">
@@ -302,15 +302,27 @@
                                                                         class="imCssLink">
                                                                         {{issue_item.name_uz}}
                                                                     </a>
-                                                                </span></b>
-                                                        </div>
-                                                        issue_{{issue_item.id}}
-                                                        {% for article in issue_{{issue_item.id}} %}
-                                                        {{article}}<br>
 
+                                                                </span></b>
+
+                                                        </div>
+                                                        {% for article in issue_item.article_set.all %}
+
+                                                        <div class="journal-item">
+                                                            <a href="{% url 'detail' pk=article.pk %}">
+                                                                <span class="fs10lh1-5"><b>
+                                                                        {{forloop.counter}}.
+                                                                        {{article.author_uz}}</b>
+                                                                    {{ article.name_uz }}
+                                                                    <a href="{{ article.file_link }}" target="_blank"
+                                                                        class="imCssLink">
+                                                                        pdf
+                                                                    </a>
+                                                                </span>
+                                                            </a>
+                                                        </div>
                                                         {% endfor %}
                                                         {% endfor %}
-                                                        <hr>
 
                                                     </div>
 

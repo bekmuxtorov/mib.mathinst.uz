@@ -85,6 +85,17 @@
                     </div>
                 </div>
             </li>
+            {% for year in years %}
+            <li class="imMnMnLast imPage">
+                <div class="label-wrapper">
+                    <div class="label-inner-wrapper">
+                        <a class="label" href="{% url 'archive' year=year %}">
+                            {{year}} </a>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+
         </ul>
     </li>
     <li class="imMnMnLast imPage" data-link-paths="{% url 'contact' %}">
