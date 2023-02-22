@@ -23,6 +23,10 @@ class Issue(models.Model):
         auto_now_add=True
     )
 
+    class Meta:
+        verbose_name = 'Jurnal soni'
+        verbose_name_plural = 'Jurnallar'
+
     def article(self, obj):
         return obj.articles
 
@@ -37,12 +41,11 @@ class Article(models.Model):
         verbose_name="Jurnal soni"
     )
 
-    author_uz = models.CharField(
-        max_length=200,
+    author_uz = models.TextField(
         verbose_name="Muallif[uz]"
     )
 
-    author_en = models.CharField(
+    author_en = models.TextField(
         max_length=200,
         verbose_name="Muallif[en]"
     )
@@ -57,29 +60,24 @@ class Article(models.Model):
         verbose_name="Nomi[en]"
     )
 
-    keywords_uz = models.CharField(
-        max_length=300,
+    keywords_uz = models.TextField(
         verbose_name="Kalit so'zlar[uz]"
     )
 
-    keywords_en = models.CharField(
-        max_length=300,
+    keywords_en = models.TextField(
         verbose_name="Kalit so'zlar[en]"
     )
 
-    short_data_uz = models.CharField(
-        max_length=400,
+    short_data_uz = models.TextField(
         verbose_name="Anatatsiya[uz]"
     )
 
-    short_data_en = models.CharField(
-        max_length=400,
+    short_data_en = models.TextField(
         verbose_name="Anatatsiya[en]"
     )
 
-    references = models.CharField(
+    references = models.TextField(
         verbose_name="Foydalanilgan adabiyotlar",
-        max_length=500
     )
 
     file_link = models.URLField(
@@ -100,6 +98,10 @@ class Article(models.Model):
         verbose_name="Kiritilgan vaqt",
         auto_now_add=True
     )
+
+    class Meta:
+        verbose_name = "Maqola"
+        verbose_name_plural = "Maqolalar"
 
     def __str__(self):
         return self.name_uz
