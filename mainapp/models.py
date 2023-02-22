@@ -42,12 +42,14 @@ class Article(models.Model):
     )
 
     author_uz = models.TextField(
-        verbose_name="Muallif[uz]"
+        verbose_name="Muallif[uz]",
+        help_text="⚠️Har bir muallifni ';'(nuqtali vergul) bilan ajratib yozing"
     )
 
     author_en = models.TextField(
         max_length=200,
-        verbose_name="Muallif[en]"
+        verbose_name="Muallif[en]",
+        help_text="⚠️Har bir muallifni ';'(nuqtali vergul) bilan ajratib yozing"
     )
 
     name_uz = models.CharField(
@@ -78,6 +80,7 @@ class Article(models.Model):
 
     references = models.TextField(
         verbose_name="Foydalanilgan adabiyotlar",
+        help_text="⚠️Har bir adabiyotni ';'(nuqtali vergul) bilan ajratib yozing."
     )
 
     file_link = models.URLField(
