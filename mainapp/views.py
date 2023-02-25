@@ -41,7 +41,12 @@ def last_issue_view(request):
     year = datetime.datetime.now().year
     years = list(range(2023, year+1))
     last_issue = models.Issue.objects.order_by("-created_at").first()
-    articles = models.Article.objects.filter(issue=last_issue)
+    articles = models.Article.objects.filter(
+        issue=last_issue
+    ).filter(
+        status='open'
+    ).order_by("ordinal_number")
+
     context = {
         "last_issue": last_issue,
         "articles": articles,
@@ -58,6 +63,8 @@ def article_detail(request, pk):
     article_date = choose_article.created_at.strftime("%Y/%m/%d")
     year = datetime.datetime.now().year
     years = list(range(2023, year+1))
+    vol = year - 2018 + 1
+    print(vol)
     context = {
         "article": choose_article,
         "authors": authors,

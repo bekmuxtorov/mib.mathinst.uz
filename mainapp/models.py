@@ -2,25 +2,24 @@ from django.db import models
 
 # Create your models here.
 
+STATUS = (
+    ('open', 'Barcha uchun ochiq'),
+    ('close', 'Barcha uchun yopiq')
+)
+
 
 class Issue(models.Model):
-    name_uz = models.CharField(
-        max_length=200,
-        verbose_name="Nomi[uz]"
-    )
-
-    name_en = models.CharField(
-        max_length=200,
-        verbose_name="Nomi[en]"
+    ordinal_number = models.IntegerField(
+        verbose_name="Jurnal tartib raqami",
+        default=0
     )
 
     file_link = models.URLField(
         verbose_name="Journal manzili"
     )
 
-    created_at = models.DateTimeField(
+    created_at = models.DateField(
         verbose_name="Kiritilgan vaqt",
-        auto_now_add=True
     )
 
     class Meta:
@@ -31,14 +30,28 @@ class Issue(models.Model):
         return obj.articles
 
     def __str__(self):
-        return self.name_uz
+        return f"{self.ordinal_number} - son"
 
 
 class Article(models.Model):
     issue = models.ForeignKey(
         to=Issue,
         on_delete=models.CASCADE,
-        verbose_name="Jurnal soni"
+        verbose_name="Jurnal soni",
+        blank=True,
+        null=True
+    )
+
+    status = models.CharField(
+        max_length=18,
+        verbose_name="Holati",
+        choices=STATUS,
+        default='close'
+    )
+
+    ordinal_number = models.IntegerField(
+        verbose_name="Tartib raqami:",
+        default=0
     )
 
     author_uz = models.TextField(
@@ -105,6 +118,19 @@ class Article(models.Model):
     class Meta:
         verbose_name = "Maqola"
         verbose_name_plural = "Maqolalar"
+
+    def save(self, *args, **kwargs):
+        keyword_name_word = "Bull.Inst.Math."
+        try:
+            set_name = f" Bull.Inst.Math., {self.created_at.year}, Vol.{self.created_at.year - 2017}, №{self.issue.ordinal_number}, PP, {self.first_page}-{self.last_page}"
+            if keyword_name_word not in self.name_uz:
+                self.name_uz = self.name_uz + set_name
+
+            if keyword_name_word not in self.name_en:
+                self.name_en = self.name_en + set_name
+            super().save(*args, **kwargs)
+        except:
+            super().save(*args, **kwargs)
 
     def __str__(self):
         return self.name_uz

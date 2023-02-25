@@ -1,3 +1,4 @@
+import datetime
 from django.contrib import admin
 from .models import Article, Issue
 
@@ -6,7 +7,10 @@ admin.site.site_header = 'Matematika Instituti Byulleteni'
 
 
 class IssueAdmin(admin.ModelAdmin):
-    list_display = ["id", "name_uz", "file_link", "created_at"]
+    def get_date(self, obj):
+        return obj.created_at.strftime("%d %B, %Y")
+
+    list_display = ["ordinal_number", "file_link", "get_date"]
     search_fields = ("name_uz",)
 
 
@@ -14,7 +18,7 @@ class ArticleAdmin(admin.ModelAdmin):
     fieldsets = (
         ("Jurnal", {
             "fields": (
-                ("issue",)
+                ("issue", "status", "ordinal_number")
             ),
             'classes': ('wide',)
         }),
@@ -43,12 +47,11 @@ class ArticleAdmin(admin.ModelAdmin):
         }),
     )
 
-    # def get_form(self, request, obj=None, **kwargs):
-    #     form = super(ArticleAdmin, self).get_form(request, obj, **kwargs)
-    #     form.base_fields['name_uz'].widget.attrs['style'] = 'height: 22em;'
-    #     return form
+    def get_date(self, obj):
+        return obj.created_at.strftime("%d %B, %Y")
 
-    list_display = ["id", "name_uz", "created_at"]
+    list_display = ["ordinal_number", "name_uz", "get_date"]
+    ordering = ("ordinal_number",)
 
 
 admin.site.register(Article, ArticleAdmin)
