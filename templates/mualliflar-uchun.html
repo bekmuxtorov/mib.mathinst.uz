@@ -14,6 +14,7 @@
 	<meta property="og:image:height" content="2160">
 	<meta name="viewport" content="width=1150" />
 
+	<link rel="stylesheet" href="{% static 'style/for_author.css'%}">
 	<link rel="stylesheet" href="{% static 'style/reset.css'%}" media="screen,print" />
 	<link rel="stylesheet" href="{% static 'style/print.css'%}" media="print" />
 	<link rel="stylesheet" href="{% static 'style/style.css'%}" media="screen,print" />
@@ -304,6 +305,10 @@
 											</div>
 
 										</div>
+										<form action="" method="post">{% csrf_token %}
+											{{form}}
+											<input type="submit" value="Jo'natish">
+										</form>
 									</div>
 								</div>
 							</div>

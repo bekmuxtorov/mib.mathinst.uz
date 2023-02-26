@@ -5,6 +5,7 @@ from django.shortcuts import render
 
 from config import settings
 from . import models
+from . import forms
 
 # Create your views here.
 
@@ -31,9 +32,37 @@ def editorial_view(request):
 
 
 def for_author_view(request):
+    form = forms.Article()
+    if request.method == "POST":
+        print(request.POST)
+        form = forms.Article(request.POST)
+        if form.is_valid():
+            author_uz = request.POST.get("author_uz")
+            name_uz = request.POST.get("name_uz")
+            name_en = request.POST.get("name_en")
+            keywords_uz = request.POST.get("keywords_uz")
+            keywords_en = request.POST.get("keywords_en")
+            short_data_uz = request.POST.get("short_data_uz")
+            short_data_en = request.POST.get("short_data_en")
+            references = request.POST.get("references")
+            file_link = request.POST.get("file_link")
+            models.Article(
+                author_uz=author_uz,
+                author_en=author_uz,
+                name_uz=name_uz,
+                name_en=name_en,
+                keywords_uz=keywords_uz,
+                keywords_en=keywords_en,
+                short_data_uz=short_data_uz,
+                short_data_en=short_data_en,
+                references=references,
+                file_link=file_link
+            ).save()
+            form = forms.Article()
+
     year = datetime.datetime.now().year
     years = list(range(2023, year+1))
-    context = {"years": years}
+    context = {"years": years, "form": form}
     return render(request, 'mualliflar-uchun.html', context)
 
 
