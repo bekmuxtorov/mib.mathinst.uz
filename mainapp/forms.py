@@ -16,6 +16,7 @@ class Article(forms.Form):
         ),
         label="Nomi[uz]",
         max_length=200,
+        help_text="Nomni tarkibida matematika formulalar mavjud bo'lsa,(\[...\], \(...\), $$...$$) Latex kalit so'zlaridan foydalanib yozishingiz mumkin."
     )
 
     name_en = forms.CharField(
@@ -23,7 +24,8 @@ class Article(forms.Form):
             attrs={"class": "form_control"}
         ),
         label="Nomi[en]",
-        max_length=200
+        max_length=200,
+        help_text="Nomni tarkibida matematika formulalar mavjud bo'lsa,(\[...\], \(...\), $$...$$) Latex kalit so'zlaridan foydalanib yozishingiz mumkin."
     )
 
     keywords_uz = forms.CharField(
