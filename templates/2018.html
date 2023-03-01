@@ -21,6 +21,10 @@
 	<link rel="stylesheet" href="{% static 'pcss/2018.css'%}" media="screen,print" />
 	<script src="{% static 'res/jquery.js'%}"></script>
 	<script src="{% static 'res/x5engine.js'%}" data-files-version=""></script>
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script type="text/javascript" id="MathJax-script" async
+		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+		</script>
 	<script>
 		window.onload = function () { checkBrowserCompatibility('Ваш браузер не поддерживает функции, требуемые для визуализации этого Сайта.', 'Возможно, Ваш браузер не поддерживает функции, требуемые для визуализации этого Сайта.', '[1]Обновите Ваш браузер[/1] или [2]продолжите процедуру [/2].', 'http://outdatedbrowser.com/'); };
 		x5engine.utils.currentPagePath = '2018.html';

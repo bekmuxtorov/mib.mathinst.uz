@@ -16,9 +16,9 @@ class IssueAdmin(admin.ModelAdmin):
 
 class ArticleAdmin(admin.ModelAdmin):
     fieldsets = (
-        ("Jurnal", {
+        ("Admin sozlamalari", {
             "fields": (
-                ("issue", "status", "ordinal_number")
+                ("issue", "status", "ordinal_number", "first_page", "last_page")
             ),
             'classes': ('wide',)
         }),
@@ -41,7 +41,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
         ("Maqola manzili", {
             "fields": (
-                ("file_link", "first_page", "last_page")
+                ("file_link", )
             ),
             'classes': ('wide',)
         }),
@@ -50,8 +50,11 @@ class ArticleAdmin(admin.ModelAdmin):
     def get_date(self, obj):
         return obj.created_at.strftime("%d %B, %Y")
 
-    list_display = ["ordinal_number", "name_uz", "get_date"]
+    get_date.short_description = "Sana"
+
+    list_display = ["ordinal_number", "issue", "name_uz", "get_date"]
     ordering = ("ordinal_number",)
+    list_filter = ("issue",)
 
 
 admin.site.register(Article, ArticleAdmin)

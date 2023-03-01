@@ -19,42 +19,37 @@
         Bulletin of the Institute of Mathematics ISSN 2181-9483
     </title>
 
-
     <meta name="generator" content="Open Journal Systems 3.3.0.8">
     <meta name="gs_meta_revision" content="1.1">
     <meta name="citation_journal_title" content="Bulletin of the Institute of Mathematics ISSN 2181-9483">
     <meta name="citation_journal_abbrev" content="APJMMR">
     <meta name="citation_issn" content="2181-9483">
-    {% for author in authors %}
-    <meta name="citation_author" content="{{ author }}">
+    {% for author in authors %}<meta name="citation_author" content="{{author}}">
     {% endfor %}
-    <meta name="citation_title" content="{{ article.name_en | upper }}">
+    <meta name="citation_title" content="{{article.name_en | upper}}">
     <meta name="citation_language" content="en">
     <meta name="citation_date" content="{{article_date}}">
     <meta name="citation_volume" content="{{article_value}}">
-    <meta name="citation_issue" content="{{article.issue}}">
+    <meta name="citation_issue" content="{{article.issue.ordinal_number}}-issue">
     <meta name="citation_firstpage" content="{{article.first_page}}">
     <meta name="citation_lastpage" content="{{article.last_page}}">
-    <meta name="citation_abstract_html_url" content="http://localhost:8000{% url 'detail' pk=article.pk %}">
-    <meta name="citation_keywords" xml:lang="en" content="{{article.keywords}}.">
+    <meta name="citation_abstract_html_url" content="http://mathinst.bekmuxtorov.me{% url 'detail' pk=article.pk %}">
+    <meta name="citation_keywords" xml:lang="en" content="{{article.keywords_en}}">
     <meta name="citation_pdf_url" content="{{article.file_link}}">
-    {% for reference in references %}
-    <meta name="citation_reference" content="{{reference}}">
+    {% for reference in references %}<meta name="citation_reference" content="{{reference.strip}}">
     {% endfor %}
-
     <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
-    {% for author in authors %}
-    <meta name="DC.Creator.PersonalName" content="{{author}}">
+    {% for author in authors %}<meta name="DC.Creator.PersonalName" content="{{author}}">
     {% endfor %}
     <meta name="DC.Date.created" scheme="ISO8601" content="{{article_date}}">
     <meta name="DC.Date.dateSubmitted" scheme="ISO8601" content="{{article_date}}">
     <meta name="DC.Date.issued" scheme="ISO8601" content="{{article_date}}">
     <meta name="DC.Date.modified" scheme="ISO8601" content="{{article_date}}">
-    <meta name="DC.Description" xml:lang="en" content="{{article.short_data_en}}">
+    <meta name="DC.Description" xml:lang="en" content="{{article.short_data_en.strip}}">
     <meta name="DC.Format" scheme="IMT" content="application/pdf">
     <meta name="DC.Identifier" content="{{article.pk}}">
     <meta name="DC.Identifier.pageNumber" content="{{article.first_page}}-{{article.last_page}}">
-    <meta name="DC.Identifier.URI" content="{% url 'detail' pk=article.pk %}">
+    <meta name="DC.Identifier.URI" content="http://mathinst.bekmuxtorov.me{% url 'detail' pk=article.pk %}">
     <meta name="DC.Language" scheme="ISO639-1" content="en">
     <meta name="DC.Rights" content="Copyright (c) 2023 Erkinjon Karimov">
     <meta name="DC.Rights" content="">
@@ -62,9 +57,9 @@
     <meta name="DC.Source.ISSN" content="2181-9483">
     <meta name="DC.Source.Issue" content="{{article.issue}}">
     <meta name="DC.Source.Volume" content="{{article_value}}">
-    <meta name="DC.Source.URI" content="http://mib.mathinst.uz/">
-    <meta name="DC.Subject" xml:lang="en" content="{{article.keywords}}.">
-    <meta name="DC.Title" content="{{article.short_data_en}}">
+    <meta name="DC.Source.URI" content="http://mathinst.bekmuxtorov.me/">
+    <meta name="DC.Subject" xml:lang="en" content="{{article.keywords_en}}.">
+    <meta name="DC.Title" content="{{article.name_en}}">
     <meta name="DC.Type" content="Text.Serial.Journal">
     <meta name="DC.Type.articleType" content="Articles">
 
@@ -73,6 +68,10 @@
     <link rel="stylesheet" href="{% static 'style/main2.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'style/fontawesome.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'style/example.css' %}">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+        </script>
 </head>
 
 <body class="pkp_page_article pkp_op_view has_site_logo" dir="ltr">
