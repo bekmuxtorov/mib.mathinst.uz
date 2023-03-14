@@ -120,19 +120,9 @@ def download_page_view(request, path):
 
 
 def open_xml_file(request):
-    xml_file_path = 'sitemap.xml'
+    xml_file_path = 'media/sitemap.xml'
     xml_tree = xml.dom.minidom.parse(xml_file_path)
     return HttpResponse(xml_tree.toxml())
-
-
-def read_file(request):
-    file_path = 'robots.txt'
-
-    with open(file_path, 'r') as file:
-        content = file.read()
-    response = HttpResponse(content, content_type='text/plain')
-
-    return HttpResponse(response)
 
 
 def archive_view(request):
