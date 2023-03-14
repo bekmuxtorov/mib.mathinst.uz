@@ -1,3 +1,5 @@
+import xml.dom.minidom
+from django.http import HttpResponse
 import datetime
 import os
 from django.http import Http404, HttpResponse
@@ -115,6 +117,12 @@ def download_page_view(request, path):
                 os.path.basename(file_path)
             return response
     raise Http404
+
+
+def open_xml_file(request):
+    xml_file_path = 'media/sitemap.xml'
+    xml_tree = xml.dom.minidom.parse(xml_file_path)
+    return HttpResponse(xml_tree.toxml())
 
 
 def archive_view(request):

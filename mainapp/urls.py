@@ -18,5 +18,6 @@ urlpatterns = [
 
     path('contact', views.contact_view, name="contact"),
     path('article/<int:pk>', views.article_detail, name="detail"),
-    path('download/<str:path>', views.download_page_view, name="download")
+    path('download/<str:path>', views.download_page_view, name="download"),
+    path('sitemap.xml/', views.open_xml_file, name='sitemap')
 ]
