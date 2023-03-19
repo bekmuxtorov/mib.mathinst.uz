@@ -1,590 +1,281 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html><!-- HTML5 -->
-<html prefix="og: http://ogp.me/ns#" lang="ru-RU" dir="ltr">
+{% block link %}{% static 'pcss/2022.css'%}{% endblock link %}
 
-<head>
-	<title>2022 - Matematika instituti byulleteni</title>
-	<meta charset="utf-8" />
-	<!--[if IE]><meta http-equiv="ImageToolbar" content="False" /><![endif]-->
-	<meta name="author" content="Erkinjon Karimov" />
-	<meta name="generator" content="Incomedia WebSite X5 Start 16.3.1 - www.websitex5.com" />
-	<meta property="og:image" content="http://mib.mathinst.uz/favImage.png" />
-	<meta property="og:image:type" content="image/png">
-	<meta property="og:image:width" content="3840">
-	<meta property="og:image:height" content="2160">
-	<meta name="viewport" content="width=1150" />
+{% block name %}2022.html{% endblock name %}
 
-	<link rel="stylesheet" href="{% static 'style/reset.css'%}" media="screen,print" />
-	<link rel="stylesheet" href="{% static 'style/print.css'%}" media="print" />
-	<link rel="stylesheet" href="{% static 'style/style.css'%}" media="screen,print" />
-	<link rel="stylesheet" href="{% static 'style/template.css'%}" media="screen" />
-	<link rel="stylesheet" href="{% static 'pcss/2022.css'%}" media="screen,print" />
-	<script src="{% static 'res/jquery.js'%}"></script>
-	<script src="{% static 'res/x5engine.js'%}" data-files-version=""></script>
-	<script src="res/jquery.js"></script>
-	<script src="res/x5engine.js" data-files-version="16-3-1-1"></script>
-	<script>
-		window.onload = function () { checkBrowserCompatibility('Ваш браузер не поддерживает функции, требуемые для визуализации этого Сайта.', 'Возможно, Ваш браузер не поддерживает функции, требуемые для визуализации этого Сайта.', '[1]Обновите Ваш браузер[/1] или [2]продолжите процедуру [/2].', 'http://outdatedbrowser.com/'); };
-		x5engine.utils.currentPagePath = '2022.html';
-		x5engine.boot.push(function () { x5engine.imPageToTop.initializeButton({}); });
-	</script>
-	<link rel="icon" href="favicon.png-637904706644269808" type="image/png" />
-	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-	<script type="text/javascript" id="MathJax-script" async
-		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-		</script>
-</head>
-
-<body>
-	<div id="imPageExtContainer">
-		<div id="imPageIntContainer">
-			<div id="imHeaderBg"></div>
-			<div id="imFooterBg"></div>
-			<div id="imPage">
-				<header id="imHeader">
-					<h1 class="imHidden">2022 - Matematika instituti byulleteni</h1>
-					<div id="imHeaderObjects">
-						<div id="imHeader_imMenuObject_01_wrapper" class="template-object-wrapper">
-							<div id="imHeader_imCell_1" class="">
-								<div id="imHeader_imCellStyleGraphics_1"></div>
-								<div id="imHeader_imCellStyle_1">
-									<div id="imHeader_imMenuObject_01">
-										<div class="hamburger-menu-background-container hamburger-component">
-											<div
-												class="hamburger-menu-background menu-mobile menu-mobile-animated hidden">
-												<div class="hamburger-menu-close-button"><span>&times;</span></div>
-											</div>
-										</div>
-										{% include 'nav.html' %}
-									</div>
-									<script>
-										x5engine.boot.push(function () { x5engine.initMenu('imHeader_imMenuObject_01', 1000) });
-										$(function () { $('#imHeader_imMenuObject_01 ul li').not('.imMnMnSeparator').each(function () { var $this = $(this), timeout = 0; $this.on('mouseenter', function () { if ($(this).parents('#imHeader_imMenuObject_01-menu-opened').length > 0) return; clearTimeout(timeout); setTimeout(function () { $this.children('ul, .multiple-column').stop(false, false).addClass('menu-slide-fade'); }, 250); }).on('mouseleave', function () { if ($(this).parents('#imHeader_imMenuObject_01-menu-opened').length > 0) return; timeout = setTimeout(function () { $this.children('ul, .multiple-column').stop(false, false).removeClass('menu-slide-fade'); }, 250); }); }); });
-
-									</script>
-								</div>
-							</div>
-						</div>
-						<div id="imHeader_imObjectTitle_03_wrapper" class="template-object-wrapper">
-							<div id="imHeader_imCell_3" class="">
-								<div id="imHeader_imCellStyleGraphics_3"></div>
-								<div id="imHeader_imCellStyle_3">
-									<div id="imHeader_imObjectTitle_03"><span
-											id="imHeader_imObjectTitle_03_text">Matematika Instituti Byulleteni</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div id="imHeader_imTextObject_04_wrapper" class="template-object-wrapper">
-							<div id="imHeader_imCell_4" class="">
-								<div id="imHeader_imCellStyleGraphics_4"></div>
-								<div id="imHeader_imCellStyle_4">
-									<div id="imHeader_imTextObject_04">
-										<div class="text-tab-content" id="imHeader_imTextObject_04_tab0" style="">
-											<div class="text-inner">
-												<div class="imTACenter"><span class="fs11lh1-5"><b><span
-																class="cf1">O'zbekiston Respublikasi Fanlar akademiyasi
-															</span></b></span></div>
-												<div class="imTACenter"><span class="fs11lh1-5"><b><span
-																class="cf1">V.I.Romanovskiy nomidagi Matematika
-																instituti</span></b></span></div>
-												<div class="imTACenter"><span class="cf1">hamda</span></div>
-												<div class="imTACenter"><span class="fs11lh1-5"><b><span
-																class="cf1">O'zbekiston Matematika
-																Jamiyati</span></b></span></div>
-												<div class="imTACenter"><span class="cf1">tomonidan </span></div>
-												<div class="imTACenter"><span class="cf1">2018-yilda ta'sis
-														etilgan</span></div>
-											</div>
-										</div>
-
-									</div>
-								</div>
-							</div>
-						</div>
-						<div id="imHeader_imObjectImage_06_wrapper" class="template-object-wrapper">
-							<div id="imHeader_imCell_6" class="">
-								<div id="imHeader_imCellStyleGraphics_6"></div>
-								<div id="imHeader_imCellStyle_6"><a href="http://mib.mathinst.uz/en/index.html"><img
-											id="imHeader_imObjectImage_06" src="{% static 'images/uk2_1.png' %}"
-											title="" alt="" /></a>
-								</div>
-							</div>
-						</div>
-						<div id="imHeader_imObjectImage_07_wrapper" class="template-object-wrapper">
-							<div id="imHeader_imCell_7" class="">
-								<div id="imHeader_imCellStyleGraphics_7"></div>
-								<div id="imHeader_imCellStyle_7"><a href="http://mib.mathinst.uz/index.html"
-										onclick="return x5engine.imShowBox({ media:[{type: 'iframe', url: 'http://mib.mathinst.uz/index.html', width: 1920, height: 1080, description: ''}]}, 0, this);"><img
-											id="imHeader_imObjectImage_07" src="{% static 'images/uzbekistan.png' %}"
-											title="" alt="" /></a></div>
-							</div>
-						</div>
-					</div>
-				</header>
-				<div id="imStickyBarContainer">
-					<div id="imStickyBarGraphics"></div>
-					<div id="imStickyBar">
-						<div id="imStickyBarObjects">
-							<div id="imStickyBar_imObjectTitle_02_wrapper" class="template-object-wrapper">
-								<div id="imStickyBar_imCell_2" class="">
-									<div id="imStickyBar_imCellStyleGraphics_2"></div>
-									<div id="imStickyBar_imCellStyle_2">
-										<div id="imStickyBar_imObjectTitle_02"><span
-												id="imStickyBar_imObjectTitle_02_text">Title</span> </div>
-									</div>
-								</div>
-							</div>
-							<div id="imStickyBar_imMenuObject_03_wrapper" class="template-object-wrapper">
-								<div id="imStickyBar_imCell_3" class="">
-									<div id="imStickyBar_imCellStyleGraphics_3"></div>
-									<div id="imStickyBar_imCellStyle_3">
-										<div id="imStickyBar_imMenuObject_03">
-											<div class="hamburger-menu-background-container hamburger-component">
-												<div
-													class="hamburger-menu-background menu-mobile menu-mobile-animated hidden">
-													<div class="hamburger-menu-close-button"><span>&times;</span></div>
-												</div>
-											</div>
-											<ul class="menu-mobile-animated hidden">
-												<li class="imMnMnFirst imPage" data-link-paths=",/index.html,/">
-													<div class="label-wrapper">
-														<div class="label-inner-wrapper">
-															<a class="label" href="index.html">
-																Asosiy </a>
-														</div>
-													</div>
-												</li>
-												<li class="imMnMnMiddle imPage" data-link-paths=",/jurnal-haqida.html">
-													<div class="label-wrapper">
-														<div class="label-inner-wrapper">
-															<a class="label" href="jurnal-haqida.html">
-																Jurnal haqida </a>
-														</div>
-													</div>
-												</li>
-												<li class="imMnMnMiddle imPage" data-link-paths=",/tahririyat.html">
-													<div class="label-wrapper">
-														<div class="label-inner-wrapper">
-															<a class="label" href="tahririyat.html">
-																Tahririyat </a>
-														</div>
-													</div>
-												</li>
-												<li class="imMnMnMiddle imPage"
-													data-link-paths=",/mualliflar-uchun.html">
-													<div class="label-wrapper">
-														<div class="label-inner-wrapper">
-															<a class="label" href="mualliflar-uchun.html">
-																Mualliflar uchun </a>
-														</div>
-													</div>
-												</li>
-												<li class="imMnMnMiddle imPage" data-link-paths=",/oxirgi-son.html">
-													<div class="label-wrapper">
-														<div class="label-inner-wrapper">
-															<a class="label" href="oxirgi-son.html">
-																Oxirgi son </a>
-														</div>
-													</div>
-												</li>
-												<li class="imMnMnMiddle imLevel">
-													<div class="label-wrapper">
-														<div class="label-inner-wrapper"><span
-																class="label">Arxiv</span></div>
-													</div>
-													<ul data-original-position="bottom" class="bottom">
-														<li class="imMnMnFirst imPage" data-link-paths=",/2018.html">
-															<div class="label-wrapper">
-																<div class="label-inner-wrapper">
-																	<a class="label" href="2018.html">
-																		2018 </a>
-																</div>
-															</div>
-														</li>
-														<li class="imMnMnMiddle imPage" data-link-paths=",/2019.html">
-															<div class="label-wrapper">
-																<div class="label-inner-wrapper">
-																	<a class="label" href="2019.html">
-																		2019 </a>
-																</div>
-															</div>
-														</li>
-														<li class="imMnMnMiddle imPage" data-link-paths=",/2020.html">
-															<div class="label-wrapper">
-																<div class="label-inner-wrapper">
-																	<a class="label" href="2020.html">
-																		2020 </a>
-																</div>
-															</div>
-														</li>
-														<li class="imMnMnMiddle imPage" data-link-paths=",/2021.html">
-															<div class="label-wrapper">
-																<div class="label-inner-wrapper">
-																	<a class="label" href="2021.html">
-																		2021 </a>
-																</div>
-															</div>
-														</li>
-														<li class="imMnMnLast imPage" data-link-paths=",/2022.html">
-															<div class="label-wrapper">
-																<div class="label-inner-wrapper">
-																	<a class="label" href="2022.html">
-																		2022 </a>
-																</div>
-															</div>
-														</li>
-													</ul>
-												</li>
-												<li class="imMnMnLast imPage" data-link-paths=",/aloqa-uchun.html">
-													<div class="label-wrapper">
-														<div class="label-inner-wrapper">
-															<a class="label" href="aloqa-uchun.html">
-																Aloqa uchun </a>
-														</div>
-													</div>
-												</li>
-											</ul>
-										</div>
-										<script>
-											x5engine.boot.push(function () { x5engine.initMenu('imStickyBar_imMenuObject_03', 1000) });
-											$(function () { $('#imStickyBar_imMenuObject_03 ul li').not('.imMnMnSeparator').each(function () { var $this = $(this), timeout = 0, subtimeout = 0, width = 'none', height = 'none'; var submenu = $this.children('ul').add($this.find('.multiple-column > ul')); $this.on('mouseenter', function () { if ($(this).parents('#imStickyBar_imMenuObject_03-menu-opened').length > 0) return; clearTimeout(timeout); clearTimeout(subtimeout); $this.children('.multiple-column').show(0); submenu.stop(false, false); if (width == 'none') { width = submenu.width(); } if (height == 'none') { height = submenu.height(); submenu.css({ overflow: 'hidden', height: 0 }); } setTimeout(function () { submenu.css({ overflow: 'hidden' }).fadeIn(1).animate({ height: height }, 300, null, function () { $(this).css('overflow', 'visible'); }); }, 250); }).on('mouseleave', function () { if ($(this).parents('#imStickyBar_imMenuObject_03-menu-opened').length > 0) return; timeout = setTimeout(function () { submenu.stop(false, false); submenu.css('overflow', 'hidden').animate({ height: 0 }, 300, null, function () { $(this).fadeOut(0); }); subtimeout = setTimeout(function () { $this.children('.multiple-column').hide(0); }, 300); }, 250); }); }); });
-
-										</script>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<a class="imHidden" href="#imGoToCont" title="Заголовок главного меню">Перейти к контенту</a>
-				<div id="imSideBarContainer">
-					<div id="imSideBarGraphics"></div>
-					<div id="imSideBar">
-						<div id="imSideBarObjects">
-							<div id="imSideBar_imObjectImage_01_wrapper" class="template-object-wrapper">
-								<div id="imSideBar_imCell_1" class="">
-									<div id="imSideBar_imCellStyleGraphics_1"></div>
-									<div id="imSideBar_imCellStyle_1"><img id="imSideBar_imObjectImage_01"
-											src="images/bim.png" title="" alt="" /></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div id="imContentContainer">
-					<div id="imContentGraphics"></div>
-					<main id="imContent">
-						<a id="imGoToCont"></a>
-						<div class="imContentDataContainer">
-							<h2 id="imPgTitle">2022</h2>
-							<div id="imBreadcrumb">Arxiv</div>
-						</div>
-						<div id="imPageRow_1" class="imPageRow">
-
-							<div id="imPageRowContent_1" class="imContentDataContainer">
-								<div id="imCell_1" class="">
-									<div id="imCellStyleGraphics_1"></div>
-									<div id="imCellStyle_1">
-										<div id="imTextObject_13_01">
-											<div class="text-tab-content" id="imTextObject_13_01_tab0" style="">
-												<div class="text-inner">
-													<div class="imTAJustify"><b><br></b></div>
-													<div class="imTAJustify">
-														<div class="imTACenter"><b class="fs10lh1-5">2022-yilda chop
-																etilgan maqolalar</b></div>
-														<div class="imTACenter"><b class="fs10lh1-5"><br></b></div>
-														<div class="imTACenter"><b><span class="fs10lh1-5"><a
-																		href="https://drive.google.com/file/d/1IfNegB6pdjHHQh5sEh_IuE4SAi674YKj/view?usp=sharing"
-																		target="_blank"
-																		class="imCssLink">1-son</a></span></b></div>
-														<div><span class="fs10lh1-5"><b>1. Kurudirek A.</b> Ta’lim
-																jarayonida noyevklid geometriya elementlaridan
-																foydalanish usullari. Bull. Inst. Math., 2022, Vol.5,
-																№1, pp. 1-5 <a
-																	href="https://drive.google.com/file/d/1PsQQjDcA7Xe9S23Hl0FD6eLEHn536E6L/view?usp=sharing"
-																	target="_blank" class="imCssLink">pdf</a></span>
-														</div>
-													</div>
-													<div class="imTALeft"><span class="fs10lh1-5"><b>2. Samatov B. T.,
-																Jurayev B. I.</b> Boshqaruvdagi GrG cheklovlari bilan
-															differentsial o‘yinda П strategiyasi. Bull. Inst. Math.,
-															2022, Vol.5, №1, pp. 6-13 <a
-																href="https://drive.google.com/file/d/1euOaoOp-0-LM81-K93bRoG1tJZj28f2f/view?usp=sharing"
-																target="_blank" class="imCssLink">pdf</a></span></div>
-													<div class="imTAJustify"><span class="fs10lh1-5"><b>3. Azizov M. S.
-															</b>Bessel operatori qatnashgan juft tartibli xususiy
-															hosilali tenglama uchun bir boshlang‘ich-chegaraviy masala
-															haqida. Bull. Inst. Math., 2022, Vol.5, №1, pp. 14-24 <a
-																href="https://drive.google.com/file/d/1jZC4CImlrxqOR8xwqfWZDUP_rPRzZ70E/view?usp=sharing"
-																target="_blank" class="imCssLink">pdf</a></span></div>
-													<div class="imTAJustify"><span class="fs10lh1-5"><b>4. Ganixodjaev
-																N. N., Dusmurodova G. X. </b>Kvadratik stoxastik
-															operatorlar tomonidan yaratilgan to‘rt o‘lchovli va besh
-															o‘lchovli algebralar. Bull. Inst. Math., 2022, Vol.5, №1,
-															pp. 25-30 <a
-																href="https://drive.google.com/file/d/1uyChHe7YUNRtlUwrl7-zk1BqpnfK8ZXc/view?usp=sharing"
-																target="_blank" class="imCssLink">pdf</a></span></div>
-													<div class="imTAJustify"><span class="fs10lh1-5"><b>5. Davlatov Sh.
-																O.</b> Bir o‘lchovli o‘zgarmas koeffisientli simmetrik
-															t-giperbolik sistemalarni noregulyar to‘rda chekli
-															elementlar usuli bilan yechish. Bull. Inst. Math., 2022,
-															Vol.5, №1, pp. 31-36 <a
-																href="https://drive.google.com/file/d/1PZhIT9Njv9QjUO9Z0mK2XvLhGRQe1qdN/view?usp=sharing"
-																target="_blank" class="imCssLink">pdf</a></span></div>
-													<div class="imTAJustify"><span class="fs10lh1-5"><b>6. Jumaev D. I.,
-																Beshimova D. R. </b>Giperfazoning eqvivariant
-															akslantirishlari. Bull. Inst. Math., 2022, Vol.5, №1, pp.
-															37-43 <a
-																href="https://drive.google.com/file/d/1PZhIT9Njv9QjUO9Z0mK2XvLhGRQe1qdN/view?usp=sharing"
-																target="_blank" class="imCssLink">pdf</a></span></div>
-													<div class="imTAJustify"><span class="fs10lh1-5"><b>7. Imomov A. A.,
-																Nazarov Z. A.</b> Markov Q-jarayoni tarkibiy
-															parametrining bahosi haqida. Bull. Inst. Math., 2022, Vol.5,
-															№1, pp. 44-55 <a
-																href="https://drive.google.com/file/d/1HMEQiSafnKHlFlulC9r7jQm_HB768fWp/view?usp=sharing"
-																target="_blank" class="imCssLink">pdf </a><br></span>
-													</div>
-													<div class="imTAJustify"><span class="fs10lh1-5"><b>8. Ismoilov A.
-																I.</b> Bir jinsli bo‘lmagan Eyler-Puasson-Darbu
-															tenglamasi uchun Darbu masalasi. Bull. Inst. Math., 2022,
-															Vol.5, №1, pp. 56-65 <a
-																href="https://drive.google.com/file/d/1RCpQofrNAY5CaWMS7ypg5oOD8gRoLdUL/view?usp=sharing"
-																target="_blank" class="imCssLink">pdf</a></span></div>
-													<div class="imTAJustify"><span class="fs10lh1-5"><b>9. Maxammadaliev
-																M. T.</b> Ikkinchi tartibli Keli daraxtida spin
-															qiymatlari to‘plami sanoqli bo‘lgan HC-modeli uchun Gibbs
-															o‘lchovlari haqida. Bull. Inst. Math., 2022, Vol.5, №1, pp.
-															66-73 <a
-																href="https://drive.google.com/file/d/1PeNyDyyVdjPsmWBVRRHo28T7apAH4Teq/view?usp=sharing"
-																target="_blank" class="imCssLink">pdf</a></span></div>
-													<div class="imTAJustify"><span class="fs10lh1-5"><b>10. Rasulov M.
-																S., Norov A. K.</b> Raqobat-diffuziya modeli uchun ikki
-															noma’lum chegarali masala. Bull. Inst. Math., 2022, Vol.5,
-															№1, pp. 74-81 <a
-																href="https://drive.google.com/file/d/1uRoSNvQ9ju5w8ubldm8i69JhBo6s0Ltw/view?usp=sharing"
-																target="_blank" class="imCssLink">pdf</a></span></div>
-													<div class="imTAJustify"><span class="fs10lh1-5"><b>11. Rasulov S.
-																I., Mustapokulov X. Y., Kuralov B. A.</b> Fredholm
-															determinantlari uchun Monte-Karlo baholari. Bull. Inst.
-															Math., 2022, Vol.5, №1, pp. 82-87 <a
-																href="https://drive.google.com/file/d/1H5GFitJGp9cO6mgr1zAqniTqQkvce9hj/view?usp=sharing"
-																target="_blank" class="imCssLink">pdf</a></span></div>
-													<div class="imTAJustify"><span class="fs10lh1-5"><b>12. Raxmonov F.
-																D.</b> Yuqori tartibli buziladigan yadroli
-															integro-differensial tenglama uchun teskari masala. Bull.
-															Inst. Math., 2022, Vol.5, №1, pp. 88-101 <a
-																href="https://drive.google.com/file/d/1nIo0KMeZ1Z9ruPrlbwuysa7SS9j3OZGd/view?usp=sharing"
-																target="_blank" class="imCssLink">pdf</a></span></div>
-													<div class="imTAJustify"><span class="fs10lh1-5"><b>13. Turakulov X.
-																Sh.</b> Chegaralanmagan parallelepiped ko‘rinishdagi
-															sohada uch o‘lchovli Trikomi tenglamasi uchun yarim davriy
-															tipdagi chegaraviy masala haqida. Bull. Inst. Math., 2022,
-															Vol.5, №1, pp. 102-107 <a
-																href="https://drive.google.com/file/d/1gk3SZ5nuI6LvqKpt0KiFZEj3NwCh7d36/view?usp=sharing"
-																target="_blank" class="imCssLink">pdf</a></span></div>
-													<div class="imTAJustify"><span class="fs10lh1-5"><b>14. Urinov A.
-																K.</b> Kasr tartibli Riman-Liuvill integrallari va
-															hosilalarini Bessel funksiyasi yordamida umumlashtirish.
-															Bull. Inst. Math., 2022, Vol.5, №1, pp. 108-155 <a
-																href="https://drive.google.com/file/d/144mYG1vPCUFf1LZ5PSEypcrwMf_Kgt-w/view?usp=sharing"
-																target="_blank" class="imCssLink">pdf</a></span></div>
-													<div class="imTAJustify"><span class="fs10lh1-5"><b>15. Yuldasheva
-																A. V.</b> Peridinamikaning nochiziqli tenglamasining
-															yechilishi haqida. Bull. Inst. Math., 2022, Vol.5, №1, pp.
-															156-160 <a
-																href="https://drive.google.com/file/d/1QsuV-qjevacnFLyo351sBRWXhw-IQvtE/view?usp=sharing"
-																target="_blank" class="imCssLink">pdf</a></span></div>
-													<div class="imTAJustify"><span class="fs10lh1-5"><br></span></div>
-													<div class="imTAJustify">
-														<div class="imTACenter"><b><span class="fs10lh1-5"><a
-																		href="https://drive.google.com/file/d/1fu7RRlVUjzDrxZgTwrY0cQw3AhFzCI5u/view?usp=sharing"
-																		target="_blank"
-																		class="imCssLink">2-son</a></span></b></div>
-														<div class="imTALeft"><b class="fs10lh1-5"><br></b></div>
-														<div class="imTAJustify">
-															<div><span class="fs10lh1-5"><b>1. Durdiev D. K., Shishkina
-																		E. L., Rahmonov A. A.</b> Ko‘p o‘lchamli fazoda
-																	kasr hosilali to‘lqin tenglamasining yechimi uchun
-																	oshkor formula. Bull. Inst. Math., 2022, Vol.5, №2,
-																	pp. 1-12 <a
-																		href="https://drive.google.com/file/d/1yE-f-PbPj6xzRMzws8W2Nfnxre56pevd/view?usp=sharing"
-																		target="_blank" class="imCssLink">pdf</a></span>
-															</div>
-															<div><span class="fs10lh1-5"><b>2. Mizomov I. E. </b>Ba'zi
-																	Koshul algebralari sinflarining Kalabi-Yau xossasi
-																	haqida. Bull. Inst. Math., 2022, Vol.5, №2, pp.
-																	13-19 <a
-																		href="https://drive.google.com/file/d/1Rbn7R1yY7hObyc_MRUhSlrwFECmcWZUY/view?usp=sharing"
-																		target="_blank" class="imCssLink">pdf</a>
-																</span></div>
-															<div><span class="fs10lh1-5"><b>3. Mustapokulov Kh. Y.,
-																		Bekchonov Sh. E.</b> Boshqaruvda geometrik
-																	cheklovlar bo`lgan sistemaga nisbatan to'plamni
-																	invariant bo`lishining zaruriy shartlari haqida.
-																	Bull. Inst. Math., 2022, Vol.5, №2, pp. 20-25 <a
-																		href="https://drive.google.com/file/d/1-QxB9u1KXzWmKSonO8Ut25WgGa6eWpel/view?usp=sharing"
-																		target="_blank" class="imCssLink">pdf</a></span>
-															</div>
-															<div><span class="fs10lh1-5"><b>4. Normatov Z.</b>
-																	Kalojero-Mozer fazosining koordinata xalqasidagi
-																	munosabat. Bull. Inst. Math., 2022, Vol.5, №2, pp.
-																	26-32 <a
-																		href="https://drive.google.com/file/d/11mramxu2TAQNfeFa-WMf3wrVlZI9EQRk/view?usp=sharing"
-																		target="_blank" class="imCssLink">pdf</a></span>
-															</div>
-															<div><span class="fs10lh1-5"><b>5. Xudayarov S. S.</b>
-																	Permutatsiya matritsasining kvadratik stoxastik
-																	jarayonlari. &nbsp;Bull. Inst. Math., 2022, Vol.5,
-																	№2, pp. 33-39 <a
-																		href="https://drive.google.com/file/d/1QQWdiZus269JbByK4B8OQxyMTxv8ehtr/view?usp=sharing"
-																		target="_blank" class="imCssLink">pdf</a></span>
-															</div>
-															<div><span class="fs10lh1-5"><b>6. Abdullayev R. Z.,
-																		Madaminov B. A. </b> $\sigma$-chekli
-																	o`lchovlarga nisbatan tuzilgan umumlashtirilgan log
-																	-algebralarning izometriyalari. Bull. Inst. Math.,
-																	2022, Vol.5, №2, pp. 40-46 <a
-																		href="https://drive.google.com/file/d/16sRrV3zsVsHmx3IG2jCv_d1ayKjwEEv6/view?usp=sharing"
-																		target="_blank" class="imCssLink">pdf</a></span>
-															</div>
-															<div><span class="fs10lh1-5"><b>7. Zuparov T. M, Xalxadjayev
-																		B. B.</b> Tasodifiy koeffitsiyentli Аbel
-																	yig`indilari qo`shiluvchilarining bog`liqlik
-																	strukturasi. Bull. Inst. Math., 2022, Vol.5, №2, pp.
-																	47-50 <a
-																		href="https://drive.google.com/file/d/1yWuerYANHzw7tXooGK9lyI7LsMIeDb3g/view?usp=sharing"
-																		target="_blank" class="imCssLink">pdf</a></span>
-															</div>
-															<div><span class="fs10lh1-5"><b>8. </b><b>Ibragimov M. M.
-																	</b>Neytral tomoniy simmetrik fazo birlik sharining
-																	geometrik xossalari. Bull. Inst. Math., 2022, Vol.5,
-																	№2, pp. 51-55 <a
-																		href="https://drive.google.com/file/d/1v2Gh_H4eDMI31buy8WzOQ9gRKzDfPt5R/view?usp=sharing"
-																		target="_blank" class="imCssLink">pdf
-																	</a></span></div>
-															<div><span class="fs10lh1-5"><b>9. Raximov D. G.,
-																		Axmadjanova D. D.</b> Yo`qotilish ro`y
-																	bermaydigan rezonatorlarda elektromagnit
-																	tebranishlar nazariyasining model masalasi haqida.
-																	Bull. Inst. Math., 2022, Vol.5, №2, pp. 56-61 <a
-																		href="https://drive.google.com/file/d/12OqLfa_O0O4-s66WwKnPa5lUpV7Iks9r/view?usp=sharing"
-																		target="_blank" class="imCssLink">pdf</a></span>
-															</div>
-															<div><span class="fs10lh1-5"><b>10. Ruziev M. Kh.,
-																		Yuldasheva N. T.</b> Aralash tipdagi tenglama
-																	uchun Frankl sharti analogi va Gellersted sharti
-																	bilan berilgan chegaraviy masala. &nbsp;&nbsp;Bull.
-																	Inst. Math., 2022, Vol.5, №2, pp. 62-71 <a
-																		href="https://drive.google.com/file/d/1uTQR_7qNBYaA5Jcq_foBdo2jh_eAFwrY/view?usp=sharing"
-																		target="_blank" class="imCssLink">pdf</a></span>
-															</div>
-															<div><span class="fs10lh1-5"><b>11. Safarov J. Sh.</b>
-																	Giperbolik tipdagi bitta integro-differensial
-																	tenglamani tadqiq etish. Bull. Inst. Math., 2022,
-																	Vol.5, №2, pp. 72-76 <a
-																		href="https://drive.google.com/file/d/1RPdx3KxZpXMU5504rfKsB_tUmyKzWeFL/view?usp=sharing"
-																		target="_blank" class="imCssLink">pdf</a></span>
-															</div>
-															<div><span class="fs10lh1-5"><b>12. Fozilov D. Sh.</b>
-																	Bianalitik funksiyalar uchun Koshi tipidagi
-																	integral. &nbsp;Bull. Inst. Math., 2022, Vol.5, №2,
-																	pp. 77-84 <a
-																		href="https://drive.google.com/file/d/1VX9N15oHR2yiXK2PvRWve70csIn33Svm/view?usp=sharing"
-																		target="_blank" class="imCssLink">pdf</a></span>
-															</div>
-															<div><span class="fs10lh1-5"><b>13. Xatamov N. M., Ibragimov
-																		I. I.</b> Keli daraxtidagi DNK molekulasining
-																	Ising modelidagi yangi Gibbs o`lchovlari. Bull.
-																	Inst. Math., 2022, Vol.5, №2, pp. 85-90 <a
-																		href="https://drive.google.com/file/d/1-e1gD8HzJVsUPcMLoHEE_Fc2mFV0GAeY/view?usp=sharing"
-																		target="_blank" class="imCssLink">pdf</a></span>
-															</div>
-															<div><span class="fs10lh1-5"><b>14. Sharipov A. S.,
-																		Abdishukurova G. M.</b> Qatlamali ko`pxillik
-																	isometriyalari gruppasining ba'zi xossalari haqida.
-																	Bull. Inst. Math., 2022, Vol.5, №2, pp. 91-96 <a
-																		href="https://drive.google.com/file/d/127PHR6vzBjUHI-pb1Tmmv7ddqKcA3Jux/view?usp=sharing"
-																		target="_blank" class="imCssLink">pdf</a></span>
-															</div>
-															<div><span class="fs10lh1-5"><b>15. Eshkabilov Y. X.,
-																		Baratov B. S </b>Ikki o'lchovli simpleksda
-																	separabel kubik stoxastik operatorning dinamikasi
-																	haqida. &nbsp;Bull. Inst. Math., 2022, Vol.5, №2,
-																	pp. 97-104 <a
-																		href="https://drive.google.com/file/d/175T_3KrmcZwBwDp9-gw5_tZZ223DldTe/view?usp=sharing"
-																		target="_blank" class="imCssLink">pdf</a></span>
-															</div>
-															<div><span class="fs10lh1-5"><b>16. Yuldashev T. K.,
-																		Egamnazarova M. G., Rasulova S. X.</b> Vaqt
-																	bo'yicha aks ettirilgan beshinchi tartibli
-																	integro-differensial tenglama uchun aralash masala
-																	haqida. Bull. Inst. Math., 2022, Vol.5, №2, pp.
-																	105-116 <a
-																		href="https://drive.google.com/file/d/1nGseJ9M5Sm7bbAOPMX4Wx-aHHrxVKOwu/view?usp=sharing"
-																		target="_blank" class="imCssLink">pdf</a></span>
-															</div>
-															<div><span class="fs10lh1-5"><b>17.</b> Zuparov Talat
-																	Marufovich 80 yillik yubileyiga bag'ishlanadi. Bull.
-																	Inst. Math., 2022, Vol.5, №2, pp. 117-118 <a
-																		href="https://drive.google.com/file/d/1o2Ub14crUSSB_kI-4ZaUZKAGU-v6Dy6t/view?usp=sharing"
-																		target="_blank" class="imCssLink">pdf</a></span>
-															</div>
-														</div>
-													</div>
-													<div class="imTAJustify"><span class="fs10lh1-5"><br></span></div>
-													<br>
-												</div>
-											</div>
-
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="imClear"></div>
-					</main>
-				</div>
-				<footer id="imFooter">
-					<div id="imFooterObjects">
-						<div id="imFooter_imObjectTitle_04_wrapper" class="template-object-wrapper">
-							<div id="imFooter_imCell_4" class="">
-								<div id="imFooter_imCellStyleGraphics_4"></div>
-								<div id="imFooter_imCellStyle_4">
-									<div id="imFooter_imObjectTitle_04"><span
-											id="imFooter_imObjectTitle_04_text">"Matematika Instituti Byulleteni"
-											elektron jurnali</span> </div>
-								</div>
-							</div>
-						</div>
-						<div id="imFooter_imTextObject_02_wrapper" class="template-object-wrapper">
-							<div id="imFooter_imCell_2" class="">
-								<div id="imFooter_imCellStyleGraphics_2"></div>
-								<div id="imFooter_imCellStyle_2">
-									<div id="imFooter_imTextObject_02">
-										<div class="text-tab-content" id="imFooter_imTextObject_02_tab0" style="">
-											<div class="text-inner">
-												<div class="imTACenter"><span class="fs12lh1-5 cf1">(C) Erkinjon
-														Karimov, 2019</span></div>
-											</div>
-										</div>
-
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</footer>
-			</div>
-			<span class="imHidden"><a href="#imGoToCont" title="Прочесть эту страницу заново">Назад к
-					содержимому</a></span>
+{% block content %}
+<div id="imContentContainer">
+	<div id="imContentGraphics"></div>
+	<main id="imContent">
+		<a id="imGoToCont"></a>
+		<div class="imContentDataContainer">
+			<h2 id="imPgTitle">2022</h2>
+			<div id="imBreadcrumb">Arxiv</div>
 		</div>
-	</div>
+		<div id="imPageRow_1" class="imPageRow">
 
-	<noscript class="imNoScript">
-		<div class="alert alert-red">Для использования этого сайта необходимо включить JavaScript.</div>
-	</noscript>
-</body>
+			<div id="imPageRowContent_1" class="imContentDataContainer">
+				<div id="imCell_1" class="">
+					<div id="imCellStyleGraphics_1"></div>
+					<div id="imCellStyle_1">
+						<div id="imTextObject_13_01">
+							<div class="text-tab-content" id="imTextObject_13_01_tab0" style="">
+								<div class="text-inner">
+									<div class="imTAJustify"><b><br></b></div>
+									<div class="imTAJustify">
+										<div class="imTACenter"><b class="fs10lh1-5">2022-yilda chop
+												etilgan maqolalar</b></div>
+										<div class="imTACenter"><b class="fs10lh1-5"><br></b></div>
+										<div class="imTACenter"><b><span class="fs10lh1-5"><a
+														href="https://drive.google.com/file/d/1IfNegB6pdjHHQh5sEh_IuE4SAi674YKj/view?usp=sharing"
+														target="_blank" class="imCssLink">1-son</a></span></b></div>
+										<div><span class="fs10lh1-5"><b>1. Kurudirek A.</b> Ta’lim
+												jarayonida noyevklid geometriya elementlaridan
+												foydalanish usullari. Bull. Inst. Math., 2022, Vol.5,
+												№1, pp. 1-5 <a
+													href="https://drive.google.com/file/d/1PsQQjDcA7Xe9S23Hl0FD6eLEHn536E6L/view?usp=sharing"
+													target="_blank" class="imCssLink">pdf</a></span>
+										</div>
+									</div>
+									<div class="imTALeft"><span class="fs10lh1-5"><b>2. Samatov B. T.,
+												Jurayev B. I.</b> Boshqaruvdagi GrG cheklovlari bilan
+											differentsial o‘yinda П strategiyasi. Bull. Inst. Math.,
+											2022, Vol.5, №1, pp. 6-13 <a
+												href="https://drive.google.com/file/d/1euOaoOp-0-LM81-K93bRoG1tJZj28f2f/view?usp=sharing"
+												target="_blank" class="imCssLink">pdf</a></span></div>
+									<div class="imTAJustify"><span class="fs10lh1-5"><b>3. Azizov M. S.
+											</b>Bessel operatori qatnashgan juft tartibli xususiy
+											hosilali tenglama uchun bir boshlang‘ich-chegaraviy masala
+											haqida. Bull. Inst. Math., 2022, Vol.5, №1, pp. 14-24 <a
+												href="https://drive.google.com/file/d/1jZC4CImlrxqOR8xwqfWZDUP_rPRzZ70E/view?usp=sharing"
+												target="_blank" class="imCssLink">pdf</a></span></div>
+									<div class="imTAJustify"><span class="fs10lh1-5"><b>4. Ganixodjaev
+												N. N., Dusmurodova G. X. </b>Kvadratik stoxastik
+											operatorlar tomonidan yaratilgan to‘rt o‘lchovli va besh
+											o‘lchovli algebralar. Bull. Inst. Math., 2022, Vol.5, №1,
+											pp. 25-30 <a
+												href="https://drive.google.com/file/d/1uyChHe7YUNRtlUwrl7-zk1BqpnfK8ZXc/view?usp=sharing"
+												target="_blank" class="imCssLink">pdf</a></span></div>
+									<div class="imTAJustify"><span class="fs10lh1-5"><b>5. Davlatov Sh.
+												O.</b> Bir o‘lchovli o‘zgarmas koeffisientli simmetrik
+											t-giperbolik sistemalarni noregulyar to‘rda chekli
+											elementlar usuli bilan yechish. Bull. Inst. Math., 2022,
+											Vol.5, №1, pp. 31-36 <a
+												href="https://drive.google.com/file/d/1PZhIT9Njv9QjUO9Z0mK2XvLhGRQe1qdN/view?usp=sharing"
+												target="_blank" class="imCssLink">pdf</a></span></div>
+									<div class="imTAJustify"><span class="fs10lh1-5"><b>6. Jumaev D. I.,
+												Beshimova D. R. </b>Giperfazoning eqvivariant
+											akslantirishlari. Bull. Inst. Math., 2022, Vol.5, №1, pp.
+											37-43 <a
+												href="https://drive.google.com/file/d/1PZhIT9Njv9QjUO9Z0mK2XvLhGRQe1qdN/view?usp=sharing"
+												target="_blank" class="imCssLink">pdf</a></span></div>
+									<div class="imTAJustify"><span class="fs10lh1-5"><b>7. Imomov A. A.,
+												Nazarov Z. A.</b> Markov Q-jarayoni tarkibiy
+											parametrining bahosi haqida. Bull. Inst. Math., 2022, Vol.5,
+											№1, pp. 44-55 <a
+												href="https://drive.google.com/file/d/1HMEQiSafnKHlFlulC9r7jQm_HB768fWp/view?usp=sharing"
+												target="_blank" class="imCssLink">pdf </a><br></span>
+									</div>
+									<div class="imTAJustify"><span class="fs10lh1-5"><b>8. Ismoilov A.
+												I.</b> Bir jinsli bo‘lmagan Eyler-Puasson-Darbu
+											tenglamasi uchun Darbu masalasi. Bull. Inst. Math., 2022,
+											Vol.5, №1, pp. 56-65 <a
+												href="https://drive.google.com/file/d/1RCpQofrNAY5CaWMS7ypg5oOD8gRoLdUL/view?usp=sharing"
+												target="_blank" class="imCssLink">pdf</a></span></div>
+									<div class="imTAJustify"><span class="fs10lh1-5"><b>9. Maxammadaliev
+												M. T.</b> Ikkinchi tartibli Keli daraxtida spin
+											qiymatlari to‘plami sanoqli bo‘lgan HC-modeli uchun Gibbs
+											o‘lchovlari haqida. Bull. Inst. Math., 2022, Vol.5, №1, pp.
+											66-73 <a
+												href="https://drive.google.com/file/d/1PeNyDyyVdjPsmWBVRRHo28T7apAH4Teq/view?usp=sharing"
+												target="_blank" class="imCssLink">pdf</a></span></div>
+									<div class="imTAJustify"><span class="fs10lh1-5"><b>10. Rasulov M.
+												S., Norov A. K.</b> Raqobat-diffuziya modeli uchun ikki
+											noma’lum chegarali masala. Bull. Inst. Math., 2022, Vol.5,
+											№1, pp. 74-81 <a
+												href="https://drive.google.com/file/d/1uRoSNvQ9ju5w8ubldm8i69JhBo6s0Ltw/view?usp=sharing"
+												target="_blank" class="imCssLink">pdf</a></span></div>
+									<div class="imTAJustify"><span class="fs10lh1-5"><b>11. Rasulov S.
+												I., Mustapokulov X. Y., Kuralov B. A.</b> Fredholm
+											determinantlari uchun Monte-Karlo baholari. Bull. Inst.
+											Math., 2022, Vol.5, №1, pp. 82-87 <a
+												href="https://drive.google.com/file/d/1H5GFitJGp9cO6mgr1zAqniTqQkvce9hj/view?usp=sharing"
+												target="_blank" class="imCssLink">pdf</a></span></div>
+									<div class="imTAJustify"><span class="fs10lh1-5"><b>12. Raxmonov F.
+												D.</b> Yuqori tartibli buziladigan yadroli
+											integro-differensial tenglama uchun teskari masala. Bull.
+											Inst. Math., 2022, Vol.5, №1, pp. 88-101 <a
+												href="https://drive.google.com/file/d/1nIo0KMeZ1Z9ruPrlbwuysa7SS9j3OZGd/view?usp=sharing"
+												target="_blank" class="imCssLink">pdf</a></span></div>
+									<div class="imTAJustify"><span class="fs10lh1-5"><b>13. Turakulov X.
+												Sh.</b> Chegaralanmagan parallelepiped ko‘rinishdagi
+											sohada uch o‘lchovli Trikomi tenglamasi uchun yarim davriy
+											tipdagi chegaraviy masala haqida. Bull. Inst. Math., 2022,
+											Vol.5, №1, pp. 102-107 <a
+												href="https://drive.google.com/file/d/1gk3SZ5nuI6LvqKpt0KiFZEj3NwCh7d36/view?usp=sharing"
+												target="_blank" class="imCssLink">pdf</a></span></div>
+									<div class="imTAJustify"><span class="fs10lh1-5"><b>14. Urinov A.
+												K.</b> Kasr tartibli Riman-Liuvill integrallari va
+											hosilalarini Bessel funksiyasi yordamida umumlashtirish.
+											Bull. Inst. Math., 2022, Vol.5, №1, pp. 108-155 <a
+												href="https://drive.google.com/file/d/144mYG1vPCUFf1LZ5PSEypcrwMf_Kgt-w/view?usp=sharing"
+												target="_blank" class="imCssLink">pdf</a></span></div>
+									<div class="imTAJustify"><span class="fs10lh1-5"><b>15. Yuldasheva
+												A. V.</b> Peridinamikaning nochiziqli tenglamasining
+											yechilishi haqida. Bull. Inst. Math., 2022, Vol.5, №1, pp.
+											156-160 <a
+												href="https://drive.google.com/file/d/1QsuV-qjevacnFLyo351sBRWXhw-IQvtE/view?usp=sharing"
+												target="_blank" class="imCssLink">pdf</a></span></div>
+									<div class="imTAJustify"><span class="fs10lh1-5"><br></span></div>
+									<div class="imTAJustify">
+										<div class="imTACenter"><b><span class="fs10lh1-5"><a
+														href="https://drive.google.com/file/d/1fu7RRlVUjzDrxZgTwrY0cQw3AhFzCI5u/view?usp=sharing"
+														target="_blank" class="imCssLink">2-son</a></span></b></div>
+										<div class="imTALeft"><b class="fs10lh1-5"><br></b></div>
+										<div class="imTAJustify">
+											<div><span class="fs10lh1-5"><b>1. Durdiev D. K., Shishkina
+														E. L., Rahmonov A. A.</b> Ko‘p o‘lchamli fazoda
+													kasr hosilali to‘lqin tenglamasining yechimi uchun
+													oshkor formula. Bull. Inst. Math., 2022, Vol.5, №2,
+													pp. 1-12 <a
+														href="https://drive.google.com/file/d/1yE-f-PbPj6xzRMzws8W2Nfnxre56pevd/view?usp=sharing"
+														target="_blank" class="imCssLink">pdf</a></span>
+											</div>
+											<div><span class="fs10lh1-5"><b>2. Mizomov I. E. </b>Ba'zi
+													Koshul algebralari sinflarining Kalabi-Yau xossasi
+													haqida. Bull. Inst. Math., 2022, Vol.5, №2, pp.
+													13-19 <a
+														href="https://drive.google.com/file/d/1Rbn7R1yY7hObyc_MRUhSlrwFECmcWZUY/view?usp=sharing"
+														target="_blank" class="imCssLink">pdf</a>
+												</span></div>
+											<div><span class="fs10lh1-5"><b>3. Mustapokulov Kh. Y.,
+														Bekchonov Sh. E.</b> Boshqaruvda geometrik
+													cheklovlar bo`lgan sistemaga nisbatan to'plamni
+													invariant bo`lishining zaruriy shartlari haqida.
+													Bull. Inst. Math., 2022, Vol.5, №2, pp. 20-25 <a
+														href="https://drive.google.com/file/d/1-QxB9u1KXzWmKSonO8Ut25WgGa6eWpel/view?usp=sharing"
+														target="_blank" class="imCssLink">pdf</a></span>
+											</div>
+											<div><span class="fs10lh1-5"><b>4. Normatov Z.</b>
+													Kalojero-Mozer fazosining koordinata xalqasidagi
+													munosabat. Bull. Inst. Math., 2022, Vol.5, №2, pp.
+													26-32 <a
+														href="https://drive.google.com/file/d/11mramxu2TAQNfeFa-WMf3wrVlZI9EQRk/view?usp=sharing"
+														target="_blank" class="imCssLink">pdf</a></span>
+											</div>
+											<div><span class="fs10lh1-5"><b>5. Xudayarov S. S.</b>
+													Permutatsiya matritsasining kvadratik stoxastik
+													jarayonlari. &nbsp;Bull. Inst. Math., 2022, Vol.5,
+													№2, pp. 33-39 <a
+														href="https://drive.google.com/file/d/1QQWdiZus269JbByK4B8OQxyMTxv8ehtr/view?usp=sharing"
+														target="_blank" class="imCssLink">pdf</a></span>
+											</div>
+											<div><span class="fs10lh1-5"><b>6. Abdullayev R. Z.,
+														Madaminov B. A. </b> $\sigma$-chekli
+													o`lchovlarga nisbatan tuzilgan umumlashtirilgan log
+													-algebralarning izometriyalari. Bull. Inst. Math.,
+													2022, Vol.5, №2, pp. 40-46 <a
+														href="https://drive.google.com/file/d/16sRrV3zsVsHmx3IG2jCv_d1ayKjwEEv6/view?usp=sharing"
+														target="_blank" class="imCssLink">pdf</a></span>
+											</div>
+											<div><span class="fs10lh1-5"><b>7. Zuparov T. M, Xalxadjayev
+														B. B.</b> Tasodifiy koeffitsiyentli Аbel
+													yig`indilari qo`shiluvchilarining bog`liqlik
+													strukturasi. Bull. Inst. Math., 2022, Vol.5, №2, pp.
+													47-50 <a
+														href="https://drive.google.com/file/d/1yWuerYANHzw7tXooGK9lyI7LsMIeDb3g/view?usp=sharing"
+														target="_blank" class="imCssLink">pdf</a></span>
+											</div>
+											<div><span class="fs10lh1-5"><b>8. </b><b>Ibragimov M. M.
+													</b>Neytral tomoniy simmetrik fazo birlik sharining
+													geometrik xossalari. Bull. Inst. Math., 2022, Vol.5,
+													№2, pp. 51-55 <a
+														href="https://drive.google.com/file/d/1v2Gh_H4eDMI31buy8WzOQ9gRKzDfPt5R/view?usp=sharing"
+														target="_blank" class="imCssLink">pdf
+													</a></span></div>
+											<div><span class="fs10lh1-5"><b>9. Raximov D. G.,
+														Axmadjanova D. D.</b> Yo`qotilish ro`y
+													bermaydigan rezonatorlarda elektromagnit
+													tebranishlar nazariyasining model masalasi haqida.
+													Bull. Inst. Math., 2022, Vol.5, №2, pp. 56-61 <a
+														href="https://drive.google.com/file/d/12OqLfa_O0O4-s66WwKnPa5lUpV7Iks9r/view?usp=sharing"
+														target="_blank" class="imCssLink">pdf</a></span>
+											</div>
+											<div><span class="fs10lh1-5"><b>10. Ruziev M. Kh.,
+														Yuldasheva N. T.</b> Aralash tipdagi tenglama
+													uchun Frankl sharti analogi va Gellersted sharti
+													bilan berilgan chegaraviy masala. &nbsp;&nbsp;Bull.
+													Inst. Math., 2022, Vol.5, №2, pp. 62-71 <a
+														href="https://drive.google.com/file/d/1uTQR_7qNBYaA5Jcq_foBdo2jh_eAFwrY/view?usp=sharing"
+														target="_blank" class="imCssLink">pdf</a></span>
+											</div>
+											<div><span class="fs10lh1-5"><b>11. Safarov J. Sh.</b>
+													Giperbolik tipdagi bitta integro-differensial
+													tenglamani tadqiq etish. Bull. Inst. Math., 2022,
+													Vol.5, №2, pp. 72-76 <a
+														href="https://drive.google.com/file/d/1RPdx3KxZpXMU5504rfKsB_tUmyKzWeFL/view?usp=sharing"
+														target="_blank" class="imCssLink">pdf</a></span>
+											</div>
+											<div><span class="fs10lh1-5"><b>12. Fozilov D. Sh.</b>
+													Bianalitik funksiyalar uchun Koshi tipidagi
+													integral. &nbsp;Bull. Inst. Math., 2022, Vol.5, №2,
+													pp. 77-84 <a
+														href="https://drive.google.com/file/d/1VX9N15oHR2yiXK2PvRWve70csIn33Svm/view?usp=sharing"
+														target="_blank" class="imCssLink">pdf</a></span>
+											</div>
+											<div><span class="fs10lh1-5"><b>13. Xatamov N. M., Ibragimov
+														I. I.</b> Keli daraxtidagi DNK molekulasining
+													Ising modelidagi yangi Gibbs o`lchovlari. Bull.
+													Inst. Math., 2022, Vol.5, №2, pp. 85-90 <a
+														href="https://drive.google.com/file/d/1-e1gD8HzJVsUPcMLoHEE_Fc2mFV0GAeY/view?usp=sharing"
+														target="_blank" class="imCssLink">pdf</a></span>
+											</div>
+											<div><span class="fs10lh1-5"><b>14. Sharipov A. S.,
+														Abdishukurova G. M.</b> Qatlamali ko`pxillik
+													isometriyalari gruppasining ba'zi xossalari haqida.
+													Bull. Inst. Math., 2022, Vol.5, №2, pp. 91-96 <a
+														href="https://drive.google.com/file/d/127PHR6vzBjUHI-pb1Tmmv7ddqKcA3Jux/view?usp=sharing"
+														target="_blank" class="imCssLink">pdf</a></span>
+											</div>
+											<div><span class="fs10lh1-5"><b>15. Eshkabilov Y. X.,
+														Baratov B. S </b>Ikki o'lchovli simpleksda
+													separabel kubik stoxastik operatorning dinamikasi
+													haqida. &nbsp;Bull. Inst. Math., 2022, Vol.5, №2,
+													pp. 97-104 <a
+														href="https://drive.google.com/file/d/175T_3KrmcZwBwDp9-gw5_tZZ223DldTe/view?usp=sharing"
+														target="_blank" class="imCssLink">pdf</a></span>
+											</div>
+											<div><span class="fs10lh1-5"><b>16. Yuldashev T. K.,
+														Egamnazarova M. G., Rasulova S. X.</b> Vaqt
+													bo'yicha aks ettirilgan beshinchi tartibli
+													integro-differensial tenglama uchun aralash masala
+													haqida. Bull. Inst. Math., 2022, Vol.5, №2, pp.
+													105-116 <a
+														href="https://drive.google.com/file/d/1nGseJ9M5Sm7bbAOPMX4Wx-aHHrxVKOwu/view?usp=sharing"
+														target="_blank" class="imCssLink">pdf</a></span>
+											</div>
+											<div><span class="fs10lh1-5"><b>17.</b> Zuparov Talat
+													Marufovich 80 yillik yubileyiga bag'ishlanadi. Bull.
+													Inst. Math., 2022, Vol.5, №2, pp. 117-118 <a
+														href="https://drive.google.com/file/d/1o2Ub14crUSSB_kI-4ZaUZKAGU-v6Dy6t/view?usp=sharing"
+														target="_blank" class="imCssLink">pdf</a></span>
+											</div>
+										</div>
+									</div>
+									<div class="imTAJustify"><span class="fs10lh1-5"><br></span></div>
+									<br>
+								</div>
+							</div>
 
-</html>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="imClear"></div>
+	</main>
+</div>
+
+{% endblock content %}
