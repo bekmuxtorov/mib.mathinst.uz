@@ -112,3 +112,16 @@ textarea {
     justify-content: center;
 }
 
+.messages {
+    text-align: center;
+    width: 100%;
+    background-color: aqua;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.messages li {
+    list-style: none;
+    color: ;
+}

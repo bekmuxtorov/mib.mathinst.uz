@@ -64,6 +64,13 @@
 		<div class="section-container">
 
 			<div class="section-title">
+				{% if messages %}
+				<ul class="messages">
+					{% for message in messages %}
+					<li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+						{% endfor %}
+				</ul>
+				{% endif %}
 				<h2>Muhim</h2>
 			</div>
 			<div class="section-rule">
@@ -90,47 +97,47 @@
 					drivega joylab uni linkini, kitob manzili qismiga joylang.
 				</p>
 			</div>
-			<form action="" method=" post" class="form-style">{% csrf_token %}
+			<form action="" method="post" class="form-style">{% csrf_token %}
 				<div class="form-input-div ">
 					<div class="input-div">
 						<label for="" class="label-class h5">Mualliflar</label>
-						<textarea name="author_uz" id="" requirament></textarea>
+						<textarea name="author_uz" id="" required></textarea>
 					</div>
 					<div class="input-div">
 						<div>
 							<label for="name_en" class="label-class h5">Nomi[uz]</label>
-							<textarea name="name_en" id="name_en" class="textarea-h" requirament></textarea>
+							<textarea name="name_en" id="name_en" class="textarea-h" required></textarea>
 						</div>
 						<div class="mt-4">
 							<label for="name_uz" class="label-class h5">Nomi[en]</label>
-							<textarea name="name_uz" id="name_uz" class="textarea-h" requirament></textarea>
+							<textarea name="name_uz" id="name_uz" class="textarea-h" required></textarea>
 						</div>
 					</div>
 				</div>
 				<div class="form-input-div mt-4">
 					<div class="input-div">
-						<label for="keywords_uz" class="label-class h5" requirament>Kalit so'zlar[uz]</label>
-						<textarea name="keywords_uz" id="keywords_uz" class="kalit-textarea" requirament></textarea>
+						<label for="keywords_uz" class="label-class h5">Kalit so'zlar[uz]</label>
+						<textarea name="keywords_uz" id="keywords_uz" class="kalit-textarea" required></textarea>
 					</div>
 					<div class="input-div">
 						<label for="keywords_en" class="label-class h5">Kalit so'zlar[en]</label>
-						<textarea name="keywords_en" id="keywords_en" class="kalit-textarea" requirament></textarea>
+						<textarea name="keywords_en" id="keywords_en" class="kalit-textarea" required></textarea>
 					</div>
 				</div>
 				<div class="form-input-div mt-4">
 					<div class="input-div">
 						<label for="short_data_uz" class="label-class h5">Anatatsiya[uz]</label>
-						<textarea name="short_data_uz" id="short_data_uz" class="kalit-textarea" requirament></textarea>
+						<textarea name="short_data_uz" id="short_data_uz" class="kalit-textarea" required></textarea>
 					</div>
 					<div class="input-div">
 						<label for="short_data_en" class="label-class h5">Anatatsiya[en]</label>
-						<textarea name="short_data_en" id="short_data_en" class="kalit-textarea" requirament></textarea>
+						<textarea name="short_data_en" id="short_data_en" class="kalit-textarea" required></textarea>
 					</div>
 				</div>
 				<div class="form-input-div mt-4">
 					<div class="input-div">
 						<label for="references" class="label-class h5">Foydalanilgan adabiyotlar</label>
-						<textarea name="references" id="references" class="foy-adabiyot" requirament></textarea>
+						<textarea name="references" id="references" class="foy-adabiyot" required></textarea>
 					</div>
 				</div>
 				<div class="form-input-div mt-4">
