@@ -1,4 +1,120 @@
-.form_control {
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+a {
+    text-decoration: underline !important;
+}
+
+.bg-section {
+    background-color: #fbfdfd !important;
+}
+
+.navbar-bg-color {
+    background-color: #006798 !important;
+}
+
+.bg-button {
+    padding: 5px 42px !important;
+    color: #fff !important;
+    background-color: #2B2E4A !important;
+}
+
+.info,
+h5 {
+    word-spacing: 3px !important;
+}
+
+textarea {
+    resize: none !important;
+}
+
+
+
+.section-w {
+    width: 100%;
+    background-color: #fff;
+}
+
+.section-container {
+    padding: 70px 30px;
+    width: 84%;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+
+.section-container .section-title h2 {
+    font-weight: 700 !important;
+}
+
+.label-class {
+    font-weight: 600 !important;
+    display: block;
+}
+
+.input-div {
+    margin: 0 auto;
+    width: 100% !important;
+}
+
+.form-input-div textarea {
+    width: 95%;
+    height: 39vh;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #006798;
+    padding: 10px;
+    resize: none !important;
+}
+
+.form-input-div {
     display: flex;
-    width: 60%;
+    justify-content: space-between;
+}
+
+.textarea-h {
+    height: 15vh !important;
+}
+
+.kalit-textarea {
+    height: 20vh !important;
+}
+
+.foy-adabiyot {
+    margin: 0;
+    width: 97.6% !important;
+    height: 20vh !important;
+}
+
+.kitob-link {
+    width: 97.6%;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #006798;
+    padding: 10px;
+}
+
+.button-submit {
+    font-weight: 500;
+    border-radius: 5px;
+    background: #90afe9;
+    outline: none;
+    font-size: 18px;
+    border: 2px solid #006798;
+    padding: 10px 40px;
+    transition: all 0.3s;
+}
+
+.submit-class {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.button-submit:hover {
+    background-color: #1d63e6;
+
 }

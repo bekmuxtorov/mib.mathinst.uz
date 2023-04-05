@@ -35,6 +35,7 @@ def editorial_view(request):
 
 def for_author_view(request):
     form = forms.Article()
+    msg = ''
     if request.method == "POST":
         print(request.POST)
         form = forms.Article(request.POST)
@@ -61,6 +62,9 @@ def for_author_view(request):
                 file_link=file_link
             ).save()
             form = forms.Article()
+            msg = 'Muaffiqqiyatli jo\'natildi'
+        else:
+            print('Xatolik')
 
     year = datetime.datetime.now().year
     years = list(range(2023, year+1))

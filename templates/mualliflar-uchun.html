@@ -1,59 +1,166 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
 {% load static %}
-{% block link %}{% static 'pcss/mualliflar-uchun.css'%}{% endblock link %}
+<html lang="en">
 
-{% block name %}mualliflar-uchun.html{% endblock name %}
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'pcss/mualliflar-uchun.css' %}">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<title>Mualliflar uchun || Jurnal</title>
+	<script type="text/javascript" id="MathJax-script" async
+		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+		</script>
+	<style>
+		@media only screen and (max-width: 900px) {
+			.form-input-div {
+				flex-direction: column !important;
+			}
+		}
+	</style>
+</head>
 
-{% block content %}
+<body>
+	<!-- Navbar start-->
+	<nav class="navbar navbar-expand-lg navbar-bg-color navbar-dark fixed-top">
+		<div class="container">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item me-3">
+						<a href="{% url 'home' %}" class="nav-link">Asosiy</a>
+					</li>
+					<li class="nav-item me-3">
+						<a href="{% url 'about' %}" class="nav-link">Jurnal haqida</a>
+					</li>
+					<li class="nav-item me-3">
+						<a href="{% url 'editorial' %}" class="nav-link">Tahririyat</a>
+					</li>
+					<li class="nav-item me-3">
+						<a href="{% url 'for_author' %}" class="nav-link active">Mualliflar uchun</a>
+					</li>
+					<li class="nav-item me-3">
+						<a href="{% url 'last_issue' %}" class="nav-link">Oxirgi son</a>
+					</li>
 
-<div id="imContentContainer">
-	<div id="imContentGraphics"></div>
-	<main id="imContent">
-		<a id="imGoToCont"></a>
-		<div class="imContentDataContainer">
-			<h2 id="imPgTitle">Mualliflar uchun</h2>
-		</div>
-		<div id="imPageRow_1" class="imPageRow">
+					<li class="nav-item me-3">
+						<a href="{% url 'contact' %}" class="nav-link">Bog'lanish</a>
+					</li>
+				</ul>
 
-			<div id="imPageRowContent_1" class="imContentDataContainer">
-				<div id="imCell_1" class="">
-					<div id="imCellStyleGraphics_1"></div>
-					<div id="imCellStyle_1">
-						<div id="imTextObject_5_01">
-							<div class="text-tab-content" id="imTextObject_5_01_tab0" style="">
-								<div class="text-inner">
-									<div class="imTACenter"><br></div>
-									<div class="imTACenter"><br></div>
-									<div class="imTACenter">"Matematika Instituti Byulleteni" elektron
-										jurnalida maqola chop etish uchun quyidagi namunaviy
-										fayllardandan foydalanishingiz mumkin:
-										<a href="{% url 'download' path='namuna-sample-shablon.zip' %}"
-											class="imCssLink" download>Namuna.zip</a>
-									</div>
-									<div class="imTACenter"><br></div>
-									<div class="imTACenter">Namuna asosida tayyorlagan maqolangizni
-										matinstbul@mathinst.uz elektron pochtasiga jo`natishingiz lozim
-										bo`ladi.</div>
-									<div class="imTACenter"><br></div>
-									<div class="imTACenter">Jurnalda chop etish uchun jo`natilgan
-										maqolalar ilgari hech qayerda nashr etilmagan, yangi ilmiy
-										natijani o`z ichiga olgan ilmiy maqola bo`lishi yoki ma'lum bir
-										yo`nalishlar bo`yicha tahliliy maqola ko`rinishida ham bo`lishi
-										mumkin. </div>
-								</div>
-							</div>
-
-						</div>
-						<form action="" method="post">{% csrf_token %}
-							{{form}}
-							<input type="submit" value="Jo'natish">
-						</form>
-					</div>
-				</div>
 			</div>
 		</div>
+	</nav>
+	<!-- Navbar end -->
 
-		<div class="imClear"></div>
-	</main>
-</div>
-{% endblock content %}
+	<!-- Muallif  form start  -->
+
+	<section class="section-w">
+		<div class="section-container">
+
+			<div class="section-title">
+				<h2>Muhim</h2>
+			</div>
+			<div class="section-rule">
+				<p>
+					1. Jurnalda chop etish uchun jo`natilgan maqolalar ilgari hech qayerda nashr etilmagan, yangi ilmiy
+					natijani o`z ichiga
+					olgan ilmiy maqola bo`lishi yoki ma'lum bir yo`nalishlar bo`yicha tahliliy maqola ko`rinishida ham
+					bo`lishi mumkin.
+				</p>
+				<p>
+					2. Har bir muallifni ';'(nuqtali vergul) bilan ajratib yozing.
+				</p>
+				<p class="mathjax_ignore">
+					3. Nomni tarkibida matematika formulalar mavjud bo'lsa,
+					<RET>(\[...\], \(...\), $$...$$)</RET>
+					Latex kalit so'zlaridan foydalanib
+					yozishingiz mumkin.
+				</p>
+				<p>
+					4. Har bir adabiyotni ';'(nuqtali vergul) bilan ajratib yozing.
+				</p>
+				<p>
+					5. Yuqoridagi namunadagi matlab faylni to'ldirib, google
+					drivega joylab uni linkini, kitob manzili qismiga joylang.
+				</p>
+			</div>
+			<form action="" method=" post" class="form-style">{% csrf_token %}
+				<div class="form-input-div ">
+					<div class="input-div">
+						<label for="" class="label-class h5">Mualliflar</label>
+						<textarea name="author_uz" id="" requirament></textarea>
+					</div>
+					<div class="input-div">
+						<div>
+							<label for="name_en" class="label-class h5">Nomi[uz]</label>
+							<textarea name="name_en" id="name_en" class="textarea-h" requirament></textarea>
+						</div>
+						<div class="mt-4">
+							<label for="name_uz" class="label-class h5">Nomi[en]</label>
+							<textarea name="name_uz" id="name_uz" class="textarea-h" requirament></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="form-input-div mt-4">
+					<div class="input-div">
+						<label for="keywords_uz" class="label-class h5" requirament>Kalit so'zlar[uz]</label>
+						<textarea name="keywords_uz" id="keywords_uz" class="kalit-textarea" requirament></textarea>
+					</div>
+					<div class="input-div">
+						<label for="keywords_en" class="label-class h5">Kalit so'zlar[en]</label>
+						<textarea name="keywords_en" id="keywords_en" class="kalit-textarea" requirament></textarea>
+					</div>
+				</div>
+				<div class="form-input-div mt-4">
+					<div class="input-div">
+						<label for="short_data_uz" class="label-class h5">Anatatsiya[uz]</label>
+						<textarea name="short_data_uz" id="short_data_uz" class="kalit-textarea" requirament></textarea>
+					</div>
+					<div class="input-div">
+						<label for="short_data_en" class="label-class h5">Anatatsiya[en]</label>
+						<textarea name="short_data_en" id="short_data_en" class="kalit-textarea" requirament></textarea>
+					</div>
+				</div>
+				<div class="form-input-div mt-4">
+					<div class="input-div">
+						<label for="references" class="label-class h5">Foydalanilgan adabiyotlar</label>
+						<textarea name="references" id="references" class="foy-adabiyot" requirament></textarea>
+					</div>
+				</div>
+				<div class="form-input-div mt-4">
+					<div class="input-div">
+						<label for="file_link" class="label-class h5">Kitob manzili</label>
+						<input type="text" name="file_link" class="kitob-link">
+					</div>
+				</div>
+				<div class="form-input-div mt-4">
+					<div class="input-div submit-class">
+						<input type="submit" value="Jo'natish" class="button-submit">
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+	<!-- Muallif  form end  -->
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+		integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+		integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
