@@ -56,13 +56,13 @@ class Article(models.Model):
 
     author_uz = models.TextField(
         verbose_name="Muallif[uz]",
-        help_text="⚠️Har bir muallifni ';'(nuqtali vergul) bilan ajratib yozing"
+        help_text="⚠️Har bir muallifni ';'(nuqtali vergul) bilan ajratib yozing!<br>Namuna: Alijonov Nodirbek;"
     )
 
     author_en = models.TextField(
         max_length=200,
         verbose_name="Muallif[en]",
-        help_text="⚠️Har bir muallifni ';'(nuqtali vergul) bilan ajratib yozing"
+        help_text="⚠️Har bir muallifni ';'(nuqtali vergul) bilan ajratib yozing!<br>Namuna: Alijonov Nodirbek;"
     )
 
     name_uz = models.CharField(
@@ -108,6 +108,12 @@ class Article(models.Model):
     last_page = models.IntegerField(
         verbose_name="Ohirgi sahifasi",
         default=0
+    )
+
+    phone_number = models.CharField(
+        verbose_name="Telefon raqam",
+        max_length=15,
+        default="Kiritilmagan"
     )
 
     created_at = models.DateTimeField(

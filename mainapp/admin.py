@@ -25,7 +25,7 @@ class ArticleAdmin(admin.ModelAdmin):
 
         ("Maqola muallifi", {
             "fields": (
-                ("author_uz", "author_en")
+                ("author_uz", "author_en", "phone_number")
             ),
             'classes': ('wide',)
         }),
@@ -52,7 +52,8 @@ class ArticleAdmin(admin.ModelAdmin):
 
     get_date.short_description = "Sana"
 
-    list_display = ["ordinal_number", "issue", "name_uz", "get_date"]
+    list_display = ["ordinal_number", "issue",
+                    "name_uz", "get_date", "phone_number"]
     ordering = ("ordinal_number",)
     list_filter = ("issue",)
 
