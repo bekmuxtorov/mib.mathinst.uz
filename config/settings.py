@@ -85,7 +85,10 @@ DATABASES = {
         'USER': env.str("DB_USER"),
         'PASSWORD': env.str("DB_PASSWORD"),
         'HOST': env.str("DB_HOST"),
-        'PORT': '5432',
+        'PORT': env.str('DB_PORT'),
+    } if env.str('DB_ENGINE') == 'postgresql' else {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
