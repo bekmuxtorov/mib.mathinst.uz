@@ -99,7 +99,6 @@ def article_detail(request, pk):
     year = datetime.datetime.now().year
     years = list(range(2023, year+1))
     vol = year - 2018 + 1
-    print(vol)
     context = {
         "article": choose_article,
         "authors": authors,

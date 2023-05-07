@@ -13,4 +13,4 @@ Disallow: archive/2021
 Disallow: archive/2022
 Disallow: contact
 
-Sitemap: https://mathinst.bekmuxtorov.me/sitemap.xml
+Sitemap: http://matinstbul.uz/sitemap.xml
